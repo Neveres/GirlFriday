@@ -4,6 +4,7 @@ import { NavBar, AppBody, AppContext } from 'src/components'
 import { Routes } from 'src/Routes'
 import { useDevice } from 'src/hooks'
 import { reducer, SET_MOBILE, SET_SEARCH_PARAMETERS } from 'src/libraries'
+import { GlobalCss } from './GlobalCss'
 
 const initialState = {
   isMobile: false,
@@ -48,6 +49,7 @@ const App = () => {
           </AppContext.Provider>
         </Suspense>
       </AppBody>
+      <GlobalCss />
     </>
   )
 }
