@@ -5,7 +5,7 @@ export const GlobalCss = () => (
   <Global
     styles={css`
       * {
-        font-family: ${fontFamily.ubuntu};
+        font-family: ${fontFamily.ubuntu} !important;
         font-style: normal;
       }
 

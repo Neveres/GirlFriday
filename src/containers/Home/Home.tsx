@@ -1,20 +1,40 @@
 /** @jsxImportSource @emotion/react */
-import React, { useContext, useRef } from 'react'
-import { AppContext, Input } from 'src/components'
+import React, { useContext, useCallback, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { AppContext, Input, Button } from 'src/components'
 import { homeContainer } from './styles'
 
 const Home = () => {
+  const navigate = useNavigate()
   const {
     state: { isMobile },
+    actions: { setSearchParameters },
   } = useContext(AppContext)
+  const [keyword, setKeyword] = useState('')
+  const [pageSize, setPageSize] = useState(30)
 
-  const inputRef = useRef(null)
+  const onChange = useCallback(
+    ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => {
+      setKeyword(value)
+    },
+    [],
+  )
+  const onClick = useCallback(() => {
+    setSearchParameters({
+      keyword,
+      page: 1,
+      pageSize,
+    })
+
+    navigate('/search-result')
+  }, [keyword, navigate, pageSize, setSearchParameters])
 
   return (
     <div css={homeContainer}>
       <div className="home-title">Search</div>
-      <Input inputRef={inputRef} />
+      <Input value={keyword} onChange={onChange} />
       <div className="home-title"># Of Results Per Page</div>
+      <Button onClick={onClick} />
     </div>
   )
 }
