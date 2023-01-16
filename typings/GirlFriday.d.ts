@@ -14,9 +14,15 @@ declare namespace GirlFriday {
     count: number
   }
 
+  type SearchParameters = {
+    page: number
+    pageSize: number
+    keyword: string
+  }
+
   declare namespace AppContext {
     type State = {
-      tags: Tag[]
+      searchParameters: SearchParameters
       isMobile: boolean
     }
 
@@ -25,7 +31,7 @@ declare namespace GirlFriday {
     }
 
     type Actions = {
-      setTags(tags: Tag[]): void
+      setSearchParameters(searchParameters: SearchParameters): void
       setMobile(isMobile: boolean): void
     }
   }
