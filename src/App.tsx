@@ -41,7 +41,10 @@ const App = () => {
 
   return (
     <>
-      <NavBar />
+      <AppContext.Provider value={valueOfAppContext}>
+        <NavBar />
+      </AppContext.Provider>
+
       <AppBody pathname={pathname}>
         <Suspense fallback={<div>Loading...</div>}>
           <AppContext.Provider value={valueOfAppContext}>

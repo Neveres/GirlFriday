@@ -6,6 +6,7 @@ export const GlobalCss = () => (
     styles={css`
       * {
         font-family: ${fontFamily.ubuntu};
+        font-style: normal;
       }
 
       body {
@@ -20,10 +21,24 @@ export const GlobalCss = () => (
   />
 )
 
+export const fontSize = {
+  extraLarge: '32px',
+  large: '16px',
+  normal: '13px',
+  small: '12px',
+}
+
+export const fontWeight = {
+  bolder: 700,
+  bold: 600,
+  lighter: 400,
+}
+
 export const fontFamily = {
   ubuntu: 'Ubuntu',
 }
 
 export const colors = {
   bgPrimary: '#181818',
+  textWhite: '#ffffff',
 }
