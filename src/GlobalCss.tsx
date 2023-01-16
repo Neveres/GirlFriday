@@ -22,8 +22,8 @@ export const GlobalCss = () => (
 )
 
 export const fontSize = {
-  extraLarge: '32px',
-  large: '16px',
+  extraLarge: '24px',
+  large: '14px',
   normal: '13px',
   small: '12px',
 }

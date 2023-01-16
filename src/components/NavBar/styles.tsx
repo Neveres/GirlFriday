@@ -2,11 +2,13 @@ import { css } from '@emotion/react'
 import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const navBarContainer = css`
-  position: absolute;
+  position: fixed;
+  display: inline-block;
   width: 80px;
-  height: 900px;
+  height: 100vh;
   left: 0px;
   top: 0px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
 
   .navBar-logo-container {
     width: 80px;

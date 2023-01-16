@@ -1,4 +1,6 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react'
+import { appBodyContainer } from './styles'
 
 export interface IAppBodyProps {
   pathname: string
@@ -8,7 +10,7 @@ export interface IAppBodyProps {
 const AppBody: React.FC<IAppBodyProps> = (props) => {
   const { children } = props
 
-  return <div>{children}</div>
+  return <div css={appBodyContainer}>{children}</div>
 }
 
 export default AppBody
