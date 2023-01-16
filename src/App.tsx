@@ -19,13 +19,13 @@ const App = () => {
       setTags(tags: GirlFriday.Tag[]) {
         dispatch({ type: SET_TAGS, ...state, tags })
       },
-      setDevice(isMobile: boolean) {
+      setMobile(isMobile: boolean) {
         dispatch({ type: SET_DEVICE, ...state, isMobile })
       },
     }),
     [state],
   )
-  useDevice({ setDevice: actions.setDevice })
+  useDevice({ setMobile: actions.setMobile })
   const valueOfAppContext = useMemo(
     () => ({
       state,

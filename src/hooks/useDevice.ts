@@ -1,14 +1,14 @@
 import { useEffect, useCallback } from 'react'
+import { thresold } from 'src/settings'
 
-const THRESHOLD = 768
 export const useDevice = ({
-  setDevice,
+  setMobile,
 }: {
-  setDevice: (isMobile: boolean) => void
+  setMobile: (isMobile: boolean) => void
 }) => {
   const handleWindowSizeChange = useCallback(() => {
-    setDevice(window.innerWidth <= THRESHOLD)
-  }, [setDevice])
+    setMobile(window.innerWidth <= thresold.mobile)
+  }, [setMobile])
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowSizeChange)

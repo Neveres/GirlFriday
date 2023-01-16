@@ -26,7 +26,7 @@ declare namespace GirlFriday {
 
     type Actions = {
       setTags(tags: Tag[]): void
-      setDevice(isMobile: boolean): void
+      setMobile(isMobile: boolean): void
     }
   }
 }
