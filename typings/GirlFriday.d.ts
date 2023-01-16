@@ -14,6 +14,14 @@ declare namespace GirlFriday {
     count: number
   }
 
+  type SearchResult = {
+    id: string
+    name: string
+    username: string
+    avater: string
+    isFollowing: boolean
+  }
+
   type SearchParameters = {
     page: number
     pageSize: number
