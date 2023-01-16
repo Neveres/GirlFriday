@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react'
-import { thresold } from 'src/settings'
+import { threshold } from 'src/settings'
 
 export const useDevice = ({
   setMobile,
@@ -7,7 +7,7 @@ export const useDevice = ({
   setMobile: (isMobile: boolean) => void
 }) => {
   const handleWindowSizeChange = useCallback(() => {
-    setMobile(window.innerWidth <= thresold.mobile)
+    setMobile(window.innerWidth <= threshold.mobile)
   }, [setMobile])
 
   useEffect(() => {
