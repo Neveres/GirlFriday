@@ -16,6 +16,4 @@ export const useDevice = ({
       window.removeEventListener('resize', handleWindowSizeChange)
     }
   }, [handleWindowSizeChange])
-
-  return {}
 }
