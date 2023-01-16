@@ -6,12 +6,14 @@ const NavBar = () => {
   const renderMenuItems = useMemo(
     () =>
       menuItems.map((item) => {
-        const { name, path } = item
+        const { name, path, isVisible } = item
 
         return (
-          <button key={path}>
-            <Link to={path}>{name}</Link>
-          </button>
+          isVisible && (
+            <button key={path}>
+              <Link to={path}>{name}</Link>
+            </button>
+          )
         )
       }),
     [],

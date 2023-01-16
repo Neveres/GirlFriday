@@ -5,5 +5,6 @@ declare namespace GirlFriday {
   type NavBarItem = {
     name: string
     path: string
+    isVisible: boolean
   }
 }

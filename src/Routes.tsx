@@ -16,14 +16,17 @@ export const menuItems: GirlFriday.NavBarItem[] = [
   {
     name: 'Home',
     path: PagePath.Home,
+    isVisible: true,
   },
   {
     name: 'Search Result',
     path: PagePath.SearchResult,
+    isVisible: false,
   },
   {
     name: 'Tags',
     path: PagePath.Tags,
+    isVisible: true,
   },
 ]
 
