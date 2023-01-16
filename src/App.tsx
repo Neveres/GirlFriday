@@ -3,11 +3,15 @@ import { useLocation } from 'react-router'
 import { NavBar, AppBody, AppContext } from 'src/components'
 import { Routes } from 'src/Routes'
 import { useDevice } from 'src/hooks'
-import { reducer, SET_DEVICE, SET_TAGS } from 'src/libraries'
+import { reducer, SET_MOBILE, SET_SEARCH_PARAMETERS } from 'src/libraries'
 
 const initialState = {
   isMobile: false,
-  tags: [] as GirlFriday.Tag[],
+  searchParameters: {
+    page: 1,
+    pageSize: 10,
+    keyword: '',
+  } as GirlFriday.SearchParameters,
 }
 
 const App = () => {
@@ -16,11 +20,11 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   const actions = useMemo(
     () => ({
-      setTags(tags: GirlFriday.Tag[]) {
-        dispatch({ type: SET_TAGS, ...state, tags })
+      setSearchParameters(searchParameters: GirlFriday.SearchParameters) {
+        dispatch({ type: SET_SEARCH_PARAMETERS, ...state, searchParameters })
       },
       setMobile(isMobile: boolean) {
-        dispatch({ type: SET_DEVICE, ...state, isMobile })
+        dispatch({ type: SET_MOBILE, ...state, isMobile })
       },
     }),
     [state],
