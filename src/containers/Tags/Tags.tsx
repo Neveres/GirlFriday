@@ -28,10 +28,10 @@ const Tags = () => {
   )
 
   return (
-    <>
+    <div css={tagsContainer}>
       <div className="page-title">Tags</div>
-      <div css={tagsContainer}>{Content}</div>
-    </>
+      <div>{Content}</div>
+    </div>
   )
 }
 
