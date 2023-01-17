@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { useContext, useCallback, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { AppContext, Input, Button } from 'src/components'
+import { AppContext, Input, Button, Slider } from 'src/components'
 import { homeContainer } from './styles'
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
     actions: { setSearchParameters },
   } = useContext(AppContext)
   const [keyword, setKeyword] = useState('')
-  const [pageSize, setPageSize] = useState(30)
+  const [pageSize, setPageSize] = useState(15)
 
   const onChange = useCallback(
     ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,6 +34,7 @@ const Home = () => {
       <div className="home-title">Search</div>
       <Input value={keyword} onChange={onChange} />
       <div className="home-title"># Of Results Per Page</div>
+      <Slider value={pageSize} setValue={setPageSize} />
       <Button onClick={onClick} />
     </div>
   )
