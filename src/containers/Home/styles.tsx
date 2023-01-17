@@ -20,6 +20,8 @@ export const homeContainer = css`
   }
 
   .page-size-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
     .page-size-container-title {
       font-weight: ${fontWeight.lighter};
       font-size: ${fontSize.extraLarge};
