@@ -7,6 +7,7 @@ export const GlobalCss = () => (
       * {
         font-family: ${fontFamily.ubuntu} !important;
         font-style: normal;
+        color: ${colors.textWhite};
       }
 
       body {
@@ -41,4 +42,5 @@ export const fontFamily = {
 export const colors = {
   bgPrimary: '#181818',
   textWhite: '#ffffff',
+  textGray: '#b2b2b2',
 }
