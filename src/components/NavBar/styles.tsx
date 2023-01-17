@@ -9,6 +9,7 @@ export const navBarContainer = css`
   left: 0px;
   top: 0px;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: ${colors.bgSecondary};
 
   .navBar-logo-container {
     width: 80px;

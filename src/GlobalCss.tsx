@@ -41,6 +41,7 @@ export const fontFamily = {
 
 export const colors = {
   bgPrimary: '#181818',
+  bgSecondary: '#1B1B1B',
   textWhite: '#ffffff',
   textGray: '#b2b2b2',
 }
