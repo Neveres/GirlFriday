@@ -31,10 +31,18 @@ const Home = () => {
 
   return (
     <div css={homeContainer}>
-      <div className="home-title">Search</div>
-      <Input value={keyword} onChange={onChange} />
-      <div className="home-title"># Of Results Per Page</div>
-      <Slider value={pageSize} setValue={setPageSize} />
+      <div className="search-container">
+        <div className="search-container-title">Search</div>
+        <Input value={keyword} onChange={onChange} />
+      </div>
+      <div className="page-size-container">
+        <div className="page-size-container-title"># Of Results Per Page</div>
+        <div>
+          <span className="page-size-container-count">{pageSize} </span>
+          <span className="page-size-container-unit">results</span>
+        </div>
+        <Slider value={pageSize} setValue={setPageSize} />
+      </div>
       <Button onClick={onClick} />
     </div>
   )
