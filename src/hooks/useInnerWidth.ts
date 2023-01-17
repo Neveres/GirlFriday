@@ -1,7 +1,7 @@
 import { useEffect, useCallback } from 'react'
 import { threshold } from 'src/settings'
 
-export const useDevice = ({
+export const useInnerWidth = ({
   setMobile,
 }: {
   setMobile: (isMobile: boolean) => void

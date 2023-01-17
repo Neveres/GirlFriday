@@ -1,4 +1,4 @@
-export * from './useDevice'
+export * from './useInnerWidth'
 export * from './useTags'
 export * from './useUsers'
 export * from './useStorage'

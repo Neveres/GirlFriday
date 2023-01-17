@@ -2,7 +2,7 @@ import React, { Suspense, useReducer, useMemo } from 'react'
 import { useLocation } from 'react-router'
 import { NavBar, AppBody, AppContext } from 'src/components'
 import { Routes } from 'src/Routes'
-import { useDevice } from 'src/hooks'
+import { useInnerWidth } from 'src/hooks'
 import { reducer, SET_MOBILE, SET_SEARCH_PARAMETERS } from 'src/libraries'
 import { GlobalCss } from './GlobalCss'
 
@@ -30,7 +30,7 @@ const App = () => {
     }),
     [state],
   )
-  useDevice({ setMobile: actions.setMobile })
+  useInnerWidth({ setMobile: actions.setMobile })
   const valueOfAppContext = useMemo(
     () => ({
       state,
