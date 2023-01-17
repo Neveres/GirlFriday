@@ -16,6 +16,7 @@ export const navBarContainer = css`
     height: 88px;
     left: 0px;
     top: 0px;
+    margin-bottom: 8px;
 
     .navBar-logo {
       position: absolute;
@@ -40,14 +41,18 @@ export const navBarContainer = css`
       width: 34px;
       height: 50px;
       margin: auto;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       font-weight: ${fontWeight.lighter};
       font-size: ${fontSize.small};
       line-height: 150%;
       letter-spacing: 0.4px;
+
       a {
         color: ${colors.textWhite};
         text-decoration: none;
+        img {
+          margin-bottom: -3px;
+        }
       }
     }
   }
