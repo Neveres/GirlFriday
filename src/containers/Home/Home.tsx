@@ -2,6 +2,8 @@
 import React, { useContext, useCallback, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppContext, Input, Button, Slider } from 'src/components'
+import { useStorage } from 'src/hooks'
+import { STORAGE_KEY_OF_SEARCH_PARAMETERS } from 'src/settings'
 import { homeContainer } from './styles'
 
 const Home = () => {
@@ -12,6 +14,7 @@ const Home = () => {
   } = useContext(AppContext)
   const [keyword, setKeyword] = useState('')
   const [pageSize, setPageSize] = useState(15)
+  const { set } = useStorage(STORAGE_KEY_OF_SEARCH_PARAMETERS, true)
 
   const onChange = useCallback(
     ({ target: { value } }: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,8 +29,13 @@ const Home = () => {
       pageSize,
     })
 
+    set({
+      keyword,
+      page: 1,
+      pageSize,
+    })
     navigate('/search-result')
-  }, [keyword, navigate, pageSize, setSearchParameters])
+  }, [keyword, navigate, pageSize, set, setSearchParameters])
 
   return (
     <div css={homeContainer}>
