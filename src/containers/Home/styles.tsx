@@ -2,6 +2,8 @@ import { css } from '@emotion/react'
 import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const homeContainer = css`
+  margin-left: 210px;
+
   .search-container {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 20px;

@@ -3,6 +3,7 @@ import { colors, fontWeight } from 'src/GlobalCss'
 
 export const tagsContainer = css`
   width: 846px;
+  margin-left: 335px;
 
   .page-title {
     font-weight: ${fontWeight.lighter};

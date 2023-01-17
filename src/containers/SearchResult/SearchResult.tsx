@@ -1,7 +1,10 @@
-import React, { useContext } from 'react'
+/** @jsxImportSource @emotion/react */
+import React, { useContext, useMemo, useCallback } from 'react'
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import { AppContext } from 'src/components'
 import { useUsers, useStorage } from 'src/hooks'
-import { STORAGE_KEY_OF_SEARCH_PARAMETERS } from 'src/settings'
+import { STORAGE_KEY_OF_SEARCH_PARAMETERS, FALLBACK_IMAGE } from 'src/settings'
+import { searchResultContainer } from './styles'
 
 const SearchResult = () => {
   const {
@@ -20,10 +23,37 @@ const SearchResult = () => {
 
   const { searchResults } = useUsers(parameters)
 
+  const imageOnErrorHandler = useCallback(
+    (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
+      event.currentTarget.src = FALLBACK_IMAGE
+      event.currentTarget.className = 'error'
+    },
+    [],
+  )
+
+  const Content = useMemo(
+    () =>
+      searchResults.map(({ id, name, username, avater }) => (
+        <div key={id} className="search-result-item">
+          <img
+            className="search-result-item-avater"
+            src={avater}
+            onError={imageOnErrorHandler}
+          />
+          <div className="search-result-item-name">{name}</div>
+          <div className="search-result-item-username">by {username}</div>
+        </div>
+      )),
+    [imageOnErrorHandler, searchResults],
+  )
+
   return (
-    <div>
-      <div>Results</div>
-      <div>{JSON.stringify(searchResults)}</div>
+    <div css={searchResultContainer}>
+      <div className="search-result-header">
+        <KeyboardArrowLeftIcon />
+        <span>Results</span>
+      </div>
+      <div className="search-result-content">{Content}</div>
     </div>
   )
 }
