@@ -1,11 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import React, { useMemo, useContext } from 'react'
+import React, { useMemo, useContext, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { AppContext } from 'src/components'
 import { menuItems } from 'src/Routes'
+import union_dark from 'src/assets/union_dark.svg'
+import union_light from 'src/assets/union_light.svg'
 import { navBarContainer } from './styles'
 
-const NavBar = () => {
+export interface INavBar {
+  pathname: string
+}
+
+const NavBar: React.FC<INavBar> = ({ pathname }) => {
   const {
     state: { isMobile },
   } = useContext(AppContext)
@@ -14,16 +20,26 @@ const NavBar = () => {
     () =>
       menuItems.map((item) => {
         const { name, path, isVisible } = item
+        const isFocus = pathname === path
 
         return (
           isVisible && (
             <div key={path} className="navBar-item">
-              <Link to={path}>{name}</Link>
+              <Link to={path}>
+                {isFocus ? (
+                  <>
+                    <img src={union_light} />
+                    {name}
+                  </>
+                ) : (
+                  <img src={union_dark} />
+                )}
+              </Link>
             </div>
           )
         )
       }),
-    [],
+    [pathname],
   )
 
   return (

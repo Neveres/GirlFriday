@@ -36,7 +36,10 @@ export const navBarContainer = css`
   .navBar-items {
     .navBar-item {
       text-align: center;
+      width: 34px;
       height: 50px;
+      margin: auto;
+      margin-bottom: 10px;
       font-weight: ${fontWeight.lighter};
       font-size: ${fontSize.small};
       line-height: 150%;
