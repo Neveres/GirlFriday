@@ -5,9 +5,7 @@ export const useUsers = (
   searchParameters: GirlFriday.SearchParameters,
   shouldFilter = false,
 ) => {
-  const [searchResults, setSearchResults] = useState(
-    [] as GirlFriday.SearchResult[],
-  )
+  const [users, setUsers] = useState([] as GirlFriday.User[])
 
   useEffect(() => {
     httpClient
@@ -18,9 +16,9 @@ export const useUsers = (
         },
       })
       .then((response) => {
-        setSearchResults(response.data.data)
+        setUsers(response.data.data)
       })
   }, [searchParameters, shouldFilter])
 
-  return { searchResults }
+  return { users }
 }

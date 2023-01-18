@@ -1,42 +1,44 @@
 import { css } from '@emotion/react'
 import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
-export const followersContainer = css`
+export const userListContainer = css`
   width: 343px;
   padding: 0 16px;
   margin-top: 31px;
 
-  .follower-container {
+  .user-container {
     display: flex;
     width: 100%;
     height: 45px;
     margin-bottom: 16px;
 
-    .follower-avater,
+    .user-avater,
     img {
       display: inline-block;
       width: 40px;
       height: 40px;
+      border: 1px solid #f8f8f8;
+      border-radius: 5px;
       margin: 3px 15px 2px 0;
     }
 
-    .follower-info-container {
+    .user-info-container {
       display: flex;
       justify-content: space-between;
       width: 100%;
 
-      .follower-name-container {
+      .user-name-container {
         display: inline-block;
         width: 200px;
         font-weight: ${fontWeight.lighter};
 
-        .follower-name {
+        .user-name {
           font-size: 16px;
           line-height: 150%;
           letter-spacing: 0.15px;
         }
 
-        .follower-username {
+        .user-username {
           font-size: ${fontSize.large};
           line-height: 150%;
           letter-spacing: 0.25px;
@@ -44,7 +46,7 @@ export const followersContainer = css`
         }
       }
 
-      .follower-status {
+      .user-status {
         border: 1px solid #ffffff;
         border-radius: 20px;
         display: flex;
@@ -54,7 +56,7 @@ export const followersContainer = css`
         gap: 10px;
         height: 28px;
 
-        .follower-status-follow {
+        .user-status-follow {
           width: 56px;
           font-size: 12px;
           font-weight: 600;
@@ -62,7 +64,7 @@ export const followersContainer = css`
           color: #121212;
         }
 
-        .follower-status-not-follow {
+        .user-status-not-follow {
           width: 40px;
           font-size: 12px;
           font-weight: ${fontWeight.lighter};

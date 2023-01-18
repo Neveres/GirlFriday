@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { httpClient } from 'src/libraries'
 
 export const useFriends = (searchParameters: GirlFriday.SearchParameters) => {
-  const [firends, setFirends] = useState([] as GirlFriday.Firend[])
+  const [friends, setFirends] = useState([] as GirlFriday.User[])
 
   useEffect(() => {
     httpClient
@@ -17,5 +17,5 @@ export const useFriends = (searchParameters: GirlFriday.SearchParameters) => {
       })
   }, [searchParameters])
 
-  return { firends }
+  return { friends }
 }

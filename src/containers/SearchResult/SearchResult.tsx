@@ -21,7 +21,7 @@ const SearchResult = () => {
     parameters = searchParametersFromStorage
   }
 
-  const { searchResults } = useUsers(parameters, true)
+  const { users } = useUsers(parameters, true)
 
   const imageOnErrorHandler = useCallback(
     (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
@@ -33,7 +33,7 @@ const SearchResult = () => {
 
   const Content = useMemo(
     () =>
-      searchResults.map(({ id, name, username, avater }) => (
+      users.map(({ id, name, username, avater }) => (
         <div key={id} className="search-result-item">
           <img
             className="search-result-item-avater"
@@ -44,7 +44,7 @@ const SearchResult = () => {
           <div className="search-result-item-username">by {username}</div>
         </div>
       )),
-    [imageOnErrorHandler, searchResults],
+    [imageOnErrorHandler, users],
   )
 
   return (
