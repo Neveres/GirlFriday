@@ -5,7 +5,7 @@ declare namespace GirlFriday {
   type NavBarItem = {
     name: string
     path: string
-    isVisible: boolean
+    isInNavBar: boolean
     withSideBar: boolean
   }
 
@@ -15,15 +15,12 @@ declare namespace GirlFriday {
     count: number
   }
 
-  type Firend = {
+  type User = {
     id: string
     name: string
     username: string
     avater: string
-  }
-
-  type SearchResult = Firend & {
-    isFollowing: boolean
+    isFollowing?: boolean
   }
 
   type SearchParameters = {

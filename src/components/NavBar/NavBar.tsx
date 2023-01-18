@@ -19,11 +19,11 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
   const renderMenuItems = useMemo(
     () =>
       menuItems.map((item) => {
-        const { name, path, isVisible } = item
+        const { name, path, isInNavBar } = item
         const isFocus = pathname === path
 
         return (
-          isVisible && (
+          isInNavBar && (
             <div key={path} className="navBar-item">
               <Link to={path}>
                 {isFocus ? (
