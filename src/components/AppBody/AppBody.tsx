@@ -23,7 +23,7 @@ const AppBody: React.FC<IAppBodyProps> = ({ pathname, children }) => {
   return (
     <div css={appBodyContainer}>
       {children}
-      {showSideBar && withSideBar && <SideBar />}
+      {true && withSideBar && <SideBar />}
     </div>
   )
 }

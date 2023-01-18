@@ -20,7 +20,10 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
     () =>
       menuItems.map((item) => {
         const { name, path, isInNavBar } = item
-        const isFocus = pathname === path
+
+        const isFocus =
+          pathname === path ||
+          (pathname === '/search-result' && path === '/home')
 
         return (
           isInNavBar && (
