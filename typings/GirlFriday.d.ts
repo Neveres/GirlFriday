@@ -6,6 +6,7 @@ declare namespace GirlFriday {
     name: string
     path: string
     isVisible: boolean
+    withSideBar: boolean
   }
 
   type Tag = {
@@ -32,6 +33,7 @@ declare namespace GirlFriday {
     type State = {
       searchParameters: SearchParameters
       isMobile: boolean
+      showSideBar: boolean
     }
 
     type Action = State & {
@@ -41,6 +43,7 @@ declare namespace GirlFriday {
     type Actions = {
       setSearchParameters(searchParameters: SearchParameters): void
       setMobile(isMobile: boolean): void
+      setSideBar(showSideBar: boolean): void
     }
   }
 }

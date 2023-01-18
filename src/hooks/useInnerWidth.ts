@@ -3,12 +3,15 @@ import { threshold } from 'src/settings'
 
 export const useInnerWidth = ({
   setMobile,
+  setSideBar,
 }: {
   setMobile: (isMobile: boolean) => void
+  setSideBar: (showSideBar: boolean) => void
 }) => {
   const handleWindowSizeChange = useCallback(() => {
     setMobile(window.innerWidth <= threshold.mobile)
-  }, [setMobile])
+    setSideBar(window.innerWidth >= threshold.sideBar)
+  }, [setMobile, setSideBar])
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowSizeChange)

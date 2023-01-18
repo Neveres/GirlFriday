@@ -3,7 +3,12 @@ import { useLocation } from 'react-router'
 import { NavBar, AppBody, AppContext } from 'src/components'
 import { Routes } from 'src/Routes'
 import { useInnerWidth } from 'src/hooks'
-import { reducer, SET_MOBILE, SET_SEARCH_PARAMETERS } from 'src/libraries'
+import {
+  reducer,
+  SET_MOBILE,
+  SET_SEARCH_PARAMETERS,
+  SET_SIDE_BAR,
+} from 'src/libraries'
 import { GlobalCss } from './GlobalCss'
 
 const initialState = {
@@ -13,6 +18,7 @@ const initialState = {
     pageSize: 10,
     keyword: '',
   } as GirlFriday.SearchParameters,
+  showSideBar: false,
 }
 
 const App = () => {
@@ -27,10 +33,16 @@ const App = () => {
       setMobile(isMobile: boolean) {
         dispatch({ type: SET_MOBILE, ...state, isMobile })
       },
+      setSideBar(showSideBar: boolean) {
+        dispatch({ type: SET_SIDE_BAR, ...state, showSideBar })
+      },
     }),
     [state],
   )
-  useInnerWidth({ setMobile: actions.setMobile })
+  useInnerWidth({
+    setMobile: actions.setMobile,
+    setSideBar: actions.setSideBar,
+  })
   const valueOfAppContext = useMemo(
     () => ({
       state,

@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useMemo, useContext, useCallback } from 'react'
+import React, { useMemo, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AppContext } from 'src/components'
 import { menuItems } from 'src/Routes'
