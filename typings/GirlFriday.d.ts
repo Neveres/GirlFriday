@@ -15,18 +15,21 @@ declare namespace GirlFriday {
     count: number
   }
 
-  type SearchResult = {
+  type Firend = {
     id: string
     name: string
     username: string
     avater: string
+  }
+
+  type SearchResult = Firend & {
     isFollowing: boolean
   }
 
   type SearchParameters = {
     page: number
     pageSize: number
-    keyword: string
+    keyword?: string
   }
 
   declare namespace AppContext {

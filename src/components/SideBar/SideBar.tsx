@@ -2,6 +2,8 @@
 import React, { useState, useCallback } from 'react'
 import { Tabs, Tab } from './Tabs'
 import TabPanel from './TabPanel'
+import Followers from './Followers'
+import Following from './Following'
 import { sideBarContainer } from './styles'
 
 const SideBar = () => {
@@ -21,10 +23,10 @@ const SideBar = () => {
       </Tabs>
 
       <TabPanel value={value} index={0}>
-        Followers
+        <Followers />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Following
+        <Following />
       </TabPanel>
     </div>
   )

@@ -21,7 +21,7 @@ const SearchResult = () => {
     parameters = searchParametersFromStorage
   }
 
-  const { searchResults } = useUsers(parameters)
+  const { searchResults } = useUsers(parameters, true)
 
   const imageOnErrorHandler = useCallback(
     (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
