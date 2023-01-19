@@ -13,8 +13,12 @@ const SideBar = () => {
     state: { searchParameters },
   } = useContext(AppContext)
 
-  const { users } = useUsers(searchParameters)
-  const { friends } = useFriends(searchParameters)
+  const params = {
+    ...searchParameters,
+    pageSize: 10,
+  }
+  const { users } = useUsers(params)
+  const { friends } = useFriends(params)
 
   const onChange = useCallback(
     (event: React.SyntheticEvent, newValue: number) => {
