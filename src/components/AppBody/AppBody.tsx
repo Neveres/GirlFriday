@@ -16,14 +16,14 @@ const AppBody: React.FC<IAppBodyProps> = ({ pathname, children }) => {
 
   const { withSideBar } = useMemo(
     () =>
-      menuItems.find(({ path }) => path === pathname) as GirlFriday.NavBarItem,
+      menuItems.find(({ path }) => path === pathname) || { withSideBar: false },
     [pathname],
   )
 
   return (
     <div css={appBodyContainer}>
       {children}
-      {true && withSideBar && <SideBar />}
+      {showSideBar && withSideBar && <SideBar />}
     </div>
   )
 }
