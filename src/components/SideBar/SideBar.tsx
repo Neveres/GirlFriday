@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useState, useCallback, useContext } from 'react'
-import { AppContext } from 'src/components'
+import React, { useState, useCallback } from 'react'
 import { useUsers, useFriends } from 'src/hooks'
 import { Tabs, Tab } from './Tabs'
 import TabPanel from './TabPanel'
@@ -9,16 +8,8 @@ import { sideBarContainer } from './styles'
 
 const SideBar = () => {
   const [value, setValue] = useState(0)
-  const {
-    state: { searchParameters },
-  } = useContext(AppContext)
-
-  const params = {
-    ...searchParameters,
-    pageSize: 10,
-  }
-  const { users } = useUsers(params)
-  const { friends } = useFriends(params)
+  const { users, increasePage: loadMoreUsers } = useUsers()
+  const { friends, increasePage: loadMoreFriends } = useFriends()
 
   const onChange = useCallback(
     (event: React.SyntheticEvent, newValue: number) => {

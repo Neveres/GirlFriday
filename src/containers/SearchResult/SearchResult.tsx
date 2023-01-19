@@ -26,7 +26,7 @@ const SearchResult = () => {
     }
   }
 
-  const { users, increasePage } = useUsers(searchParameters, true)
+  const { users, increasePage } = useUsers(searchParameters)
 
   const imageOnErrorHandler = useCallback(
     (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
