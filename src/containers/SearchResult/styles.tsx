@@ -15,6 +15,7 @@ export const searchResultContainer = css`
       width: 40px;
       height: 40px;
       margin-right: 20px;
+      cursor: pointer;
     }
 
     span {

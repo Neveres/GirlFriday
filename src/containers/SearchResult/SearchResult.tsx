@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React, { useContext, useMemo, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import { AppContext, Button } from 'src/components'
 import { useUsers, useStorage } from 'src/hooks'
@@ -7,6 +8,7 @@ import { STORAGE_KEY_OF_SEARCH_PARAMETERS, FALLBACK_IMAGE } from 'src/settings'
 import { searchResultContainer } from './styles'
 
 const SearchResult = () => {
+  const navigate = useNavigate()
   const {
     state: { isMobile, searchParameters },
     actions: { setSearchParameters },
@@ -54,10 +56,14 @@ const SearchResult = () => {
     increasePage()
   }, [increasePage])
 
+  const backToHomePage = useCallback(() => {
+    navigate('/home')
+  }, [navigate])
+
   return (
     <div css={searchResultContainer}>
       <div className="search-result-header">
-        <KeyboardArrowLeftIcon />
+        <KeyboardArrowLeftIcon onClick={backToHomePage} />
         <span>Results</span>
       </div>
       <div className="search-result-content">{Content}</div>
