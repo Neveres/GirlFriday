@@ -52,7 +52,7 @@ const Home = () => {
         </div>
         <Slider value={pageSize} setValue={setPageSize} />
       </div>
-      <Button onClick={onClick} text="search" />
+      <Button onClick={onClick} text="search" isMobile={isMobile} />
     </div>
   )
 }

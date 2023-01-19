@@ -67,7 +67,7 @@ const SearchResult = () => {
         <span>Results</span>
       </div>
       <div className="search-result-content">{Content}</div>
-      <Button onClick={onClick} text="more" />
+      <Button onClick={onClick} text="more" isMobile={isMobile} />
     </div>
   )
 }
