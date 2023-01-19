@@ -18,6 +18,7 @@ export const GlobalCss = () => (
         min-height: 100vh;
         background-color: ${colors.bgPrimary};
         position: relative;
+        overflow: hidden;
       }
     `}
   />

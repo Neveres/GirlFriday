@@ -1,7 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useContext, useMemo } from 'react'
-import { AppContext, SideBar } from 'src/components'
-import { menuItems } from 'src/Routes'
+import React from 'react'
 import { appBodyContainer } from './styles'
 
 export interface IAppBodyProps {
@@ -9,23 +7,8 @@ export interface IAppBodyProps {
   children?: React.ReactElement
 }
 
-const AppBody: React.FC<IAppBodyProps> = ({ pathname, children }) => {
-  const {
-    state: { showSideBar },
-  } = useContext(AppContext)
-
-  const { withSideBar } = useMemo(
-    () =>
-      menuItems.find(({ path }) => path === pathname) || { withSideBar: false },
-    [pathname],
-  )
-
-  return (
-    <div css={appBodyContainer}>
-      {children}
-      {showSideBar && withSideBar && <SideBar />}
-    </div>
-  )
-}
+const AppBody: React.FC<IAppBodyProps> = ({ children }) => (
+  <div css={appBodyContainer}>{children}</div>
+)
 
 export default AppBody

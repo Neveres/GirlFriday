@@ -12,12 +12,11 @@ const TabPanel: React.FC<ITabPanel> = ({ children, index, value }) => {
       role="tabpanel"
       hidden={value !== index}
       id={`tabpanel-${index}`}
-      style={
-        {
-          // overflowY: 'scroll',
-          // height: '200%',
-        }
-      }
+      // style={{
+      //   // overflowY: 'scroll',
+      //   overflowY: 'auto',
+      //   // height: '200%',
+      // }}
     >
       {value === index && <div>{children}</div>}
     </div>

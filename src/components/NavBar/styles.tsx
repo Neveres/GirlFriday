@@ -3,7 +3,6 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const navBarContainer = css`
   position: fixed;
-  display: inline-block;
   width: 80px;
   height: 100vh;
   left: 0px;

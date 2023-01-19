@@ -1,6 +1,6 @@
 import React, { Suspense, useReducer, useMemo } from 'react'
 import { useLocation } from 'react-router'
-import { NavBar, AppBody, AppContext } from 'src/components'
+import { NavBar, AppBody, AppContext, SideBar } from 'src/components'
 import { Routes } from 'src/Routes'
 import { useInnerWidth } from 'src/hooks'
 import {
@@ -39,10 +39,12 @@ const App = () => {
     }),
     [state],
   )
+
   useInnerWidth({
     setMobile: actions.setMobile,
     setSideBar: actions.setSideBar,
   })
+
   const valueOfAppContext = useMemo(
     () => ({
       state,
@@ -61,6 +63,10 @@ const App = () => {
             <Routes />
           </Suspense>
         </AppBody>
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <SideBar pathname={pathname} />
+        </Suspense>
       </AppContext.Provider>
 
       <GlobalCss />

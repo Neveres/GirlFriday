@@ -7,7 +7,7 @@ import union_dark from 'src/assets/union_dark.svg'
 import union_light from 'src/assets/union_light.svg'
 import { navBarContainer } from './styles'
 
-export interface INavBar {
+interface INavBar {
   pathname: string
 }
 
