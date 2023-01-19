@@ -8,7 +8,17 @@ interface ITabPanel {
 
 const TabPanel: React.FC<ITabPanel> = ({ children, index, value }) => {
   return (
-    <div role="tabpanel" hidden={value !== index} id={`tabpanel-${index}`}>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`tabpanel-${index}`}
+      style={
+        {
+          // overflowY: 'scroll',
+          // height: '200%',
+        }
+      }
+    >
       {value === index && <div>{children}</div>}
     </div>
   )

@@ -1,13 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import React, { useMemo, useCallback } from 'react'
+import InfiniteScroll from 'react-infinite-scroll-component'
 import { FALLBACK_IMAGE } from 'src/settings'
 import { userListContainer } from './styles'
 
 interface IUserList {
   users: GirlFriday.User[]
+  fetchMoreUser: () => void
 }
 
-const UserList: React.FC<IUserList> = ({ users }) => {
+const UserList: React.FC<IUserList> = ({ users, fetchMoreUser }) => {
   const imageOnErrorHandler = useCallback(
     (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
       event.currentTarget.src = FALLBACK_IMAGE
@@ -45,7 +47,17 @@ const UserList: React.FC<IUserList> = ({ users }) => {
     [imageOnErrorHandler, users],
   )
 
-  return <div css={userListContainer}>{Content}</div>
+  return (
+    <InfiniteScroll
+      css={userListContainer}
+      dataLength={users.length}
+      next={fetchMoreUser}
+      hasMore={true}
+      loader={<h4>Loading...</h4>}
+    >
+      {Content}
+    </InfiniteScroll>
+  )
 }
 
 export default UserList

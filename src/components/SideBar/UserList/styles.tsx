@@ -3,8 +3,7 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const userListContainer = css`
   width: 343px;
-  padding: 0 16px;
-  margin-top: 31px;
+  padding: 31px 16px 0 16px;
 
   .user-container {
     display: flex;

@@ -17,6 +17,7 @@ export const GlobalCss = () => (
       #root {
         min-height: 100vh;
         background-color: ${colors.bgPrimary};
+        position: relative;
       }
     `}
   />
