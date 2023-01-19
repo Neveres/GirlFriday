@@ -15,7 +15,7 @@ const initialState = {
   isMobile: false,
   searchParameters: {
     page: 1,
-    pageSize: 10,
+    pageSize: 6,
     keyword: '',
   } as GirlFriday.SearchParameters,
   showSideBar: false,

@@ -9,11 +9,11 @@ import { homeContainer } from './styles'
 const Home = () => {
   const navigate = useNavigate()
   const {
-    state: { isMobile },
+    state: { isMobile, searchParameters },
     actions: { setSearchParameters },
   } = useContext(AppContext)
   const [keyword, setKeyword] = useState('')
-  const [pageSize, setPageSize] = useState(15)
+  const [pageSize, setPageSize] = useState(searchParameters.pageSize)
   const { set } = useStorage(STORAGE_KEY_OF_SEARCH_PARAMETERS, true)
 
   const onChange = useCallback(
@@ -22,6 +22,7 @@ const Home = () => {
     },
     [],
   )
+
   const onClick = useCallback(() => {
     setSearchParameters({
       keyword,
@@ -51,7 +52,7 @@ const Home = () => {
         </div>
         <Slider value={pageSize} setValue={setPageSize} />
       </div>
-      <Button onClick={onClick} />
+      <Button onClick={onClick} text="search" />
     </div>
   )
 }

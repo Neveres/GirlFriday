@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { useContext, useMemo, useCallback } from 'react'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
-import { AppContext } from 'src/components'
+import { AppContext, Button } from 'src/components'
 import { useUsers, useStorage } from 'src/hooks'
 import { STORAGE_KEY_OF_SEARCH_PARAMETERS, FALLBACK_IMAGE } from 'src/settings'
 import { searchResultContainer } from './styles'
@@ -9,19 +9,22 @@ import { searchResultContainer } from './styles'
 const SearchResult = () => {
   const {
     state: { isMobile, searchParameters },
+    actions: { setSearchParameters },
   } = useContext(AppContext)
+
   const { get } = useStorage(STORAGE_KEY_OF_SEARCH_PARAMETERS, true)
 
-  const searchParametersFromStorage = get()
-
-  let parameters = searchParameters
-  if (searchParameters.keyword) {
-    parameters = searchParameters
-  } else if (searchParametersFromStorage.keyword) {
-    parameters = searchParametersFromStorage
+  if (!searchParameters.keyword) {
+    const searchParametersFromStorage = get()
+    if (searchParametersFromStorage.keyword) {
+      setSearchParameters({
+        ...searchParametersFromStorage,
+        page: 1,
+      })
+    }
   }
 
-  const { users } = useUsers(parameters, true)
+  const { users, increasePage } = useUsers(searchParameters, true)
 
   const imageOnErrorHandler = useCallback(
     (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
@@ -47,6 +50,10 @@ const SearchResult = () => {
     [imageOnErrorHandler, users],
   )
 
+  const onClick = useCallback(() => {
+    increasePage()
+  }, [increasePage])
+
   return (
     <div css={searchResultContainer}>
       <div className="search-result-header">
@@ -54,6 +61,7 @@ const SearchResult = () => {
         <span>Results</span>
       </div>
       <div className="search-result-content">{Content}</div>
+      <Button onClick={onClick} text="more" />
     </div>
   )
 }
