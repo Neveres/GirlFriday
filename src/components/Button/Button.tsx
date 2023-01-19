@@ -1,5 +1,7 @@
-import React from 'react'
-import { Button as MuiButton } from '@mui/material'
+import React, { useContext } from 'react'
+import { Button as MuiButton, ThemeProvider } from '@mui/material'
+import { AppContext } from 'src/components'
+import { theme } from './theme'
 
 interface IButton {
   onClick: () => void
@@ -7,7 +9,17 @@ interface IButton {
 }
 
 const Button: React.FC<IButton> = ({ onClick, text }) => {
-  return <MuiButton onClick={onClick}>{text}</MuiButton>
+  const {
+    state: { isMobile },
+  } = useContext(AppContext)
+
+  return (
+    <ThemeProvider theme={isMobile ? theme.mobile : theme.desktop}>
+      <MuiButton className="mobile" onClick={onClick}>
+        {text}
+      </MuiButton>
+    </ThemeProvider>
+  )
 }
 
 export default Button
