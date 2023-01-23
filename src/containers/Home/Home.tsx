@@ -50,7 +50,7 @@ const Home = () => {
           <span className="page-size-container-count">{pageSize} </span>
           <span className="page-size-container-unit">results</span>
         </div>
-        <Slider value={pageSize} setValue={setPageSize} />
+        <Slider value={pageSize} setValue={setPageSize} isMobile={isMobile} />
       </div>
       <Button onClick={onClick} text="search" isMobile={isMobile} />
     </div>
