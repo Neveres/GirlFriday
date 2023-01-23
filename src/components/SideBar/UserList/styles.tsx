@@ -4,6 +4,7 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 export const userListContainer = css`
   width: 343px;
   padding: 31px 16px 0 16px;
+  background-color: ${colors.bgSecondary};
 
   .user-container {
     display: flex;

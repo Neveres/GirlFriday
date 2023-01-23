@@ -12,13 +12,12 @@ export const GlobalCss = () => (
 
       body {
         margin: 0;
+        background-color: ${colors.bgPrimary};
       }
 
       #root {
         min-height: 100vh;
-        background-color: ${colors.bgPrimary};
         position: relative;
-        overflow: hidden;
       }
     `}
   />

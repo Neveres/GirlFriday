@@ -8,6 +8,7 @@ import {
   SET_MOBILE,
   SET_SEARCH_PARAMETERS,
   SET_SIDE_BAR,
+  pathWithSideBar,
 } from 'src/libraries'
 import { GlobalCss } from './GlobalCss'
 
@@ -53,6 +54,11 @@ const App = () => {
     [state, actions],
   )
 
+  const shouldShowSideBar = useMemo(
+    () => state.showSideBar && pathWithSideBar(pathname),
+    [pathname, state.showSideBar],
+  )
+
   return (
     <>
       <AppContext.Provider value={valueOfAppContext}>
@@ -65,7 +71,8 @@ const App = () => {
         </AppBody>
 
         <Suspense fallback={<div>Loading...</div>}>
-          <SideBar pathname={pathname} />
+          {/* {shouldShowSideBar && <SideBar />} */}
+          {true && <SideBar />}
         </Suspense>
       </AppContext.Provider>
 

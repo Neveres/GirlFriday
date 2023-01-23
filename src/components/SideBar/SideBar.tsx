@@ -1,21 +1,12 @@
 /** @jsxImportSource @emotion/react */
-import React, { useState, useCallback, useContext, useMemo } from 'react'
-import { AppContext } from 'src/components'
+import React, { useState, useCallback } from 'react'
 import { useUsers, useFriends } from 'src/hooks'
-import { menuItems } from 'src/Routes'
 import { Tabs, Tab } from './Tabs'
 import TabPanel from './TabPanel'
 import UserList from './UserList'
 import { sideBarContainer } from './styles'
 
-interface ISideBar {
-  pathname: string
-}
-
-const SideBar: React.FC<ISideBar> = ({ pathname }) => {
-  const {
-    state: { showSideBar },
-  } = useContext(AppContext)
+const SideBar = () => {
   const [value, setValue] = useState(0)
   const { users, increasePage: fecthMoreUser } = useUsers()
   const { friends, increasePage: fetchMoreFriend } = useFriends()
@@ -27,14 +18,7 @@ const SideBar: React.FC<ISideBar> = ({ pathname }) => {
     [],
   )
 
-  const { withSideBar } = useMemo(
-    () =>
-      menuItems.find(({ path }) => path === pathname) || { withSideBar: false },
-    [pathname],
-  )
-
-  // return showSideBar && withSideBar ? (
-  return true && withSideBar ? (
+  return (
     <div css={sideBarContainer}>
       <Tabs value={value} onChange={onChange} variant="fullWidth">
         <Tab label="Followers" />
@@ -48,7 +32,7 @@ const SideBar: React.FC<ISideBar> = ({ pathname }) => {
         <UserList users={friends} fetchMoreUser={fetchMoreFriend} />
       </TabPanel>
     </div>
-  ) : null
+  )
 }
 
 export default SideBar
