@@ -9,7 +9,7 @@ export const useUsers = (searchParameters?: GirlFriday.SearchParameters) => {
   const params = useMemo(
     () =>
       searchParameters
-        ? searchParameters
+        ? { ...searchParameters, page }
         : { ...DEFAULT_PARAMS_OF_USER_LIST, page },
     [page, searchParameters],
   )

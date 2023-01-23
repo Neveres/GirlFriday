@@ -2,6 +2,7 @@
 import React, { useContext, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
+import InfiniteScroll from 'react-infinite-scroll-component'
 import { AppContext, Button } from 'src/components'
 import { useUsers, useStorage } from 'src/hooks'
 import { STORAGE_KEY_OF_SEARCH_PARAMETERS, FALLBACK_IMAGE } from 'src/settings'
@@ -66,7 +67,16 @@ const SearchResult = () => {
         <KeyboardArrowLeftIcon onClick={backToHomePage} />
         <span>Results</span>
       </div>
-      <div className="search-result-content">{Content}</div>
+      <div className="search-result-content">
+        <InfiniteScroll
+          dataLength={users.length}
+          next={increasePage}
+          hasMore={true}
+          loader={null}
+        >
+          {Content}
+        </InfiniteScroll>
+      </div>
       <Button onClick={onClick} text="more" isMobile={isMobile} />
     </div>
   )
