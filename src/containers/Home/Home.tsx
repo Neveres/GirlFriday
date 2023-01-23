@@ -42,7 +42,7 @@ const Home = () => {
     <div css={homeContainer}>
       <div className="search-container">
         <div className="search-container-title">Search</div>
-        <Input value={keyword} onChange={onChange} />
+        <Input value={keyword} onChange={onChange} isMobile={isMobile} />
       </div>
       <div className="page-size-container">
         <div className="page-size-container-title"># Of Results Per Page</div>
