@@ -39,7 +39,7 @@ const Home = () => {
   }, [keyword, navigate, pageSize, set, setSearchParameters])
 
   return (
-    <div css={homeContainer}>
+    <div css={isMobile ? homeContainer.mobile : homeContainer.desktop}>
       <div className="search-container">
         <div className="search-container-title">Search</div>
         <Input value={keyword} onChange={onChange} isMobile={isMobile} />

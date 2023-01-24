@@ -46,7 +46,7 @@ export const theme = {
         styleOverrides: {
           root: {
             ...style,
-            width: '335',
+            width: '335px',
           },
         },
       },

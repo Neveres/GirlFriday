@@ -36,12 +36,12 @@ export const theme = {
   }),
   mobile: createTheme({
     components: {
-      MuiOutlinedInput: {
+      MuiSlider: {
         styleOverrides: {
           ...styleOverrides,
           root: {
             ...styleOverrides.root,
-            width: '335px',
+            width: '320px',
           },
         },
       },
