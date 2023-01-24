@@ -24,10 +24,13 @@ export const GlobalCss = () => (
 )
 
 export const fontSize = {
-  extraLarge: '24px',
+  xxxLarge: '48px',
+  xxLarge: '24px',
+  xLarge: '16px',
   large: '14px',
-  normal: '13px',
+  medium: '13px',
   small: '12px',
+  xSmall: '11px',
 }
 
 export const fontWeight = {

@@ -33,7 +33,7 @@ export const userListContainer = css`
         font-weight: ${fontWeight.lighter};
 
         .user-name {
-          font-size: 16px;
+          font-size: ${fontSize.xLarge};
           line-height: 150%;
           letter-spacing: 0.15px;
         }
@@ -58,15 +58,15 @@ export const userListContainer = css`
 
         .user-status-follow {
           width: 56px;
-          font-size: 12px;
-          font-weight: 600;
+          font-size: ${fontSize.small};
+          font-weight: ${fontWeight.bold};
           line-height: 100%;
           color: #121212;
         }
 
         .user-status-not-follow {
           width: 40px;
-          font-size: 12px;
+          font-size: ${fontSize.small};
           font-weight: ${fontWeight.lighter};
           line-height: 100%;
         }

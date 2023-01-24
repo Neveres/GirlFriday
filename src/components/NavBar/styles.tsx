@@ -24,7 +24,7 @@ export const navBarContainer = css`
       left: 23px;
       top: 37px;
       font-weight: ${fontWeight.bolder};
-      font-size: ${fontSize.normal};
+      font-size: ${fontSize.medium};
       line-height: 15px;
       letter-spacing: -0.05em;
       background: linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%);
@@ -70,7 +70,7 @@ export const navBarHeaderContainer = css`
     left: 21px;
     top: 28px;
     font-weight: ${fontWeight.bolder};
-    font-size: ${fontSize.normal};
+    font-size: ${fontSize.medium};
     line-height: 15px;
     letter-spacing: -0.05em;
     background: linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%);

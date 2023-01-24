@@ -87,7 +87,7 @@ export const searchResultContainer = {
 
       .search-result-sub-header {
         margin-left: 10px;
-        font-weight: 400;
+        font-weight: ${fontWeight.lighter};
         font-size: 24px;
         line-height: 150%;
       }

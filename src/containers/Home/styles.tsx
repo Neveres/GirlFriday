@@ -13,7 +13,7 @@ export const homeContainer = {
       .search-container-title {
         margin: 50px 0 25px 0;
         font-weight: ${fontWeight.lighter};
-        font-size: ${fontSize.extraLarge};
+        font-size: ${fontSize.xxLarge};
         line-height: 150%;
         display: flex;
         align-items: center;
@@ -27,20 +27,20 @@ export const homeContainer = {
 
       .page-size-container-title {
         font-weight: ${fontWeight.lighter};
-        font-size: ${fontSize.extraLarge};
+        font-size: ${fontSize.xxLarge};
         line-height: 150%;
         margin-bottom: 10px;
       }
 
       .page-size-container-count {
         font-weight: ${fontWeight.bolder};
-        font-size: 48px;
+        font-size: ${fontSize.xxxLarge};
         line-height: 150%;
       }
 
       .page-size-container-unit {
         font-weight: ${fontWeight.lighter};
-        font-size: 16px;
+        font-size: ${fontSize.xLarge};
         line-height: 150%;
         letter-spacing: 0.15px;
       }
@@ -57,7 +57,7 @@ export const homeContainer = {
       .search-container-title {
         margin: 50px 0 25px 0;
         font-weight: ${fontWeight.lighter};
-        font-size: ${fontSize.extraLarge};
+        font-size: ${fontSize.xxLarge};
         line-height: 150%;
         color: ${colors.textWhite};
       }
@@ -68,20 +68,20 @@ export const homeContainer = {
 
       .page-size-container-title {
         font-weight: ${fontWeight.lighter};
-        font-size: ${fontSize.extraLarge};
+        font-size: ${fontSize.xxLarge};
         line-height: 150%;
         margin-bottom: 10px;
       }
 
       .page-size-container-count {
         font-weight: ${fontWeight.bolder};
-        font-size: 48px;
+        font-size: ${fontSize.xxxLarge};
         line-height: 150%;
       }
 
       .page-size-container-unit {
         font-weight: ${fontWeight.lighter};
-        font-size: 16px;
+        font-size: ${fontSize.xLarge};
         line-height: 150%;
         letter-spacing: 0.15px;
       }
