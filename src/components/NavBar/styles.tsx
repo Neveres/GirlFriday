@@ -56,3 +56,46 @@ export const navBarContainer = css`
     }
   }
 `
+
+export const navBarHeaderContainer = css`
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  background-color: ${colors.bgSecondary};
+
+  .navBar-logo {
+    position: absolute;
+    left: 21px;
+    top: 28px;
+    font-weight: ${fontWeight.bolder};
+    font-size: ${fontSize.normal};
+    line-height: 15px;
+    letter-spacing: -0.05em;
+    background: linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+`
+
+export const navBarFooterContainer = css`
+  position: fixed;
+  width: 100%;
+  height: 66px;
+  bottom: 0;
+  left: 0;
+  background-color: ${colors.bgSecondary};
+
+  .navBar-items {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navBar-item {
+      margin-right: 40px;
+    }
+  }
+`

@@ -5,7 +5,11 @@ import { AppContext } from 'src/components'
 import { menuItems } from 'src/Routes'
 import union_dark from 'src/assets/union_dark.svg'
 import union_light from 'src/assets/union_light.svg'
-import { navBarContainer } from './styles'
+import {
+  navBarContainer,
+  navBarHeaderContainer,
+  navBarFooterContainer,
+} from './styles'
 
 interface INavBar {
   pathname: string
@@ -16,7 +20,7 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
     state: { isMobile },
   } = useContext(AppContext)
 
-  const renderMenuItems = useMemo(
+  const MenuItems = useMemo(
     () =>
       menuItems.map((item) => {
         const { name, path, isInNavBar } = item
@@ -32,7 +36,7 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
                 {isFocus ? (
                   <>
                     <img src={union_light} />
-                    {name}
+                    {!isMobile && name}
                   </>
                 ) : (
                   <img src={union_dark} />
@@ -42,15 +46,24 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
           )
         )
       }),
-    [pathname],
+    [isMobile, pathname],
   )
 
-  return (
+  return isMobile ? (
+    <>
+      <div css={navBarHeaderContainer}>
+        <div className="navBar-logo">LOGO</div>
+      </div>
+      <div css={navBarFooterContainer}>
+        <div className="navBar-items">{MenuItems}</div>
+      </div>
+    </>
+  ) : (
     <div css={navBarContainer}>
       <div className="navBar-logo-container">
         <div className="navBar-logo">LOGO</div>
       </div>
-      <div className="navBar-items">{renderMenuItems}</div>
+      <div className="navBar-items">{MenuItems}</div>
     </div>
   )
 }
