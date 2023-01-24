@@ -2,6 +2,7 @@ import { css } from '@emotion/react'
 import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const navBarContainer = css`
+  box-sizing: border-box;
   position: fixed;
   width: 80px;
   height: 100vh;
@@ -15,14 +16,14 @@ export const navBarContainer = css`
     height: 88px;
     left: 0px;
     top: 0px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 
     .navBar-logo {
       position: absolute;
       width: 35px;
       height: 15px;
-      left: 23px;
-      top: 37px;
+      left: 22px;
+      top: 36px;
       font-weight: ${fontWeight.bolder};
       font-size: ${fontSize.medium};
       line-height: 15px;
@@ -40,7 +41,7 @@ export const navBarContainer = css`
       width: 34px;
       height: 50px;
       margin: auto;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
       font-weight: ${fontWeight.lighter};
       font-size: ${fontSize.small};
       line-height: 150%;
@@ -50,7 +51,7 @@ export const navBarContainer = css`
         color: ${colors.textWhite};
         text-decoration: none;
         img {
-          margin-bottom: -3px;
+          margin-bottom: -4px;
         }
       }
     }
