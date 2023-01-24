@@ -14,6 +14,7 @@ export const useInnerWidth = ({
   }, [setMobile, setSideBar])
 
   useEffect(() => {
+    handleWindowSizeChange()
     window.addEventListener('resize', handleWindowSizeChange)
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange)
