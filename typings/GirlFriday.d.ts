@@ -7,6 +7,7 @@ declare namespace GirlFriday {
     path: string
     isInNavBar: boolean
     withSideBar: boolean
+    withNavBar: boolean
   }
 
   type Tag = {
