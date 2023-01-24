@@ -3,21 +3,21 @@ import { colors, fontWeight } from 'src/GlobalCss'
 
 export const tagsContainer = {
   desktop: css`
-    width: 846px;
-    margin-left: 335px;
+    width: 875px;
+    margin-left: 334px;
 
     .page-title {
       font-weight: ${fontWeight.lighter};
       font-size: 30px;
       line-height: 150%;
-      margin: 75px 0 20px 0;
+      margin: 76px 0 21px 0;
     }
 
     .tag-container {
       width: 150px;
       height: 199px;
       display: inline-block;
-      margin-right: 19px;
+      margin-right: 25px;
       margin-bottom: 37px;
 
       .tag-big-title {
@@ -26,7 +26,7 @@ export const tagsContainer = {
         height: 150px;
         background: rgba(255, 255, 255, 0.06);
         border-radius: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 7px;
 
         .tag-big-title-name {
           box-sizing: border-box;
@@ -39,7 +39,7 @@ export const tagsContainer = {
           max-width: 129px;
           height: 50px;
           left: 10px;
-          top: 86px;
+          top: 89px;
 
           border: 4px solid #ffffff;
           border-radius: 8px;
@@ -53,6 +53,7 @@ export const tagsContainer = {
         width: 143px;
         font-weight: ${fontWeight.lighter};
         line-height: 150%;
+        /* margin-top: -3px; */
 
         .tag-sub-title-name {
           height: 22px;
