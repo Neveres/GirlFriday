@@ -49,15 +49,22 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
     [isMobile, pathname],
   )
 
+  const withNavBar = useMemo(
+    () => menuItems.find(({ path }) => pathname === path)?.withNavBar || false,
+    [pathname],
+  )
+
   return isMobile ? (
-    <>
-      <div css={navBarHeaderContainer}>
-        <div className="navBar-logo">LOGO</div>
-      </div>
-      <div css={navBarFooterContainer}>
-        <div className="navBar-items">{MenuItems}</div>
-      </div>
-    </>
+    withNavBar ? (
+      <>
+        <div css={navBarHeaderContainer}>
+          <div className="navBar-logo">LOGO</div>
+        </div>
+        <div css={navBarFooterContainer}>
+          <div className="navBar-items">{MenuItems}</div>
+        </div>
+      </>
+    ) : null
   ) : (
     <div css={navBarContainer}>
       <div className="navBar-logo-container">

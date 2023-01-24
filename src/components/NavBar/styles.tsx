@@ -84,7 +84,7 @@ export const navBarFooterContainer = css`
   position: fixed;
   width: 100%;
   height: 66px;
-  bottom: 0;
+  bottom: 66px;
   left: 0;
   background-color: ${colors.bgSecondary};
 

@@ -88,8 +88,8 @@ export const homeContainer = {
     }
 
     .MuiButtonBase-root {
-      position: absolute;
-      bottom: 80px;
+      /* position: absolute;
+      bottom: 80px; */
     }
   `,
 }

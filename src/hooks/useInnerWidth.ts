@@ -19,5 +19,5 @@ export const useInnerWidth = ({
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange)
     }
-  }, [handleWindowSizeChange])
+  }, [])
 }

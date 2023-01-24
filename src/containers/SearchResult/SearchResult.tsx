@@ -62,11 +62,25 @@ const SearchResult = () => {
   }, [navigate])
 
   return (
-    <div css={searchResultContainer}>
-      <div className="search-result-header">
-        <KeyboardArrowLeftIcon onClick={backToHomePage} />
-        <span>Results</span>
-      </div>
+    <div
+      css={
+        isMobile ? searchResultContainer.mobile : searchResultContainer.desktop
+      }
+    >
+      {isMobile ? (
+        <div className="search-result-header">
+          <div className="search-result-main-header">
+            <KeyboardArrowLeftIcon onClick={backToHomePage} />
+            <span>Home Page</span>
+          </div>
+          <div className="search-result-sub-header">Results</div>
+        </div>
+      ) : (
+        <div className="search-result-header">
+          <KeyboardArrowLeftIcon onClick={backToHomePage} />
+          <span>Results</span>
+        </div>
+      )}
       <div className="search-result-content">
         <InfiniteScroll
           dataLength={users.length}
