@@ -41,14 +41,15 @@ const Home = () => {
   return (
     <div css={isMobile ? homeContainer.mobile : homeContainer.desktop}>
       <div className="search-container">
-        <div className="search-container-title">Search</div>
+        <div className="search-header">Search</div>
         <Input value={keyword} onChange={onChange} isMobile={isMobile} />
       </div>
       <div className="page-size-container">
-        <div className="page-size-container-title"># Of Results Per Page</div>
-        <div>
-          <span className="page-size-container-count">{pageSize} </span>
-          <span className="page-size-container-unit">results</span>
+        <div className="page-size-title"># Of Results Per Page</div>
+        <div className="page-size-status">
+          <span className="page-size-status-count">30 </span>
+          {/* <span className="page-size-status-count">{pageSize} </span> */}
+          <span className="page-size-status-unit">results</span>
         </div>
         <Slider value={pageSize} setValue={setPageSize} isMobile={isMobile} />
       </div>
