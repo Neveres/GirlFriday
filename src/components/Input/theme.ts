@@ -7,6 +7,10 @@ const style = {
   borderRadius: '6px',
   color: colors.textWhite,
   '& input': {
+    width: '725px',
+    height: '60px',
+    marginTop: '-1px',
+    marginLeft: '4px',
     fontWeight: fontWeight.lighter,
     fontSize: fontSize.large,
     lineHeight: '150%',
@@ -19,6 +23,9 @@ const style = {
     borderColor: 'white',
   },
   '& .MuiOutlinedInput-notchedOutline': {
+    width: '723px',
+    height: '61px',
+    boxSizing: 'border-box',
     border: '3px solid rgba(255, 255, 255, 0.5)',
   },
   '&.Mui-focused': {
