@@ -1,5 +1,4 @@
 import { css } from '@emotion/react'
-import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const sliderContainer = {
   desktop: css`
