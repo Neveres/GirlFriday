@@ -16,14 +16,14 @@ export const navBarContainer = css`
     height: 88px;
     left: 0px;
     top: 0px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 
     .navBar-logo {
       position: absolute;
       width: 35px;
       height: 15px;
-      left: 22px;
-      top: 36px;
+      left: 18px;
+      top: 34px;
       font-weight: ${fontWeight.bolder};
       font-size: ${fontSize.medium};
       line-height: 15px;
@@ -36,6 +36,7 @@ export const navBarContainer = css`
   }
 
   .navBar-items {
+    margin-left: -3px;
     .navBar-item {
       text-align: center;
       width: 34px;
