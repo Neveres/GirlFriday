@@ -33,8 +33,8 @@ const markMap: {
     value: 56.25,
     label: 12,
   },
-  74.25: {
-    value: 74.25,
+  74.5: {
+    value: 74.5,
     label: 15,
   },
   99: {

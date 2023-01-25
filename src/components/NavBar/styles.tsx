@@ -36,7 +36,7 @@ export const navBarContainer = css`
   }
 
   .navBar-items {
-    margin-left: -3px;
+    margin-left: -5px;
     .navBar-item {
       text-align: center;
       width: 34px;
