@@ -47,8 +47,6 @@ export const userListContainer = css`
 
       .user-status {
         position: absolute;
-        top: 8px;
-        right: -9px;
         border: 1px solid #ffffff;
         border-radius: 20px;
         display: inline-flex;
@@ -77,12 +75,16 @@ export const userListContainer = css`
       .follow {
         width: 76px;
         height: 28px;
+        top: 8px;
+        right: -6px;
         background: ${colors.textWhite};
       }
 
       .not-follow {
         width: 60px;
         height: 28px;
+        top: 8px;
+        right: -8px;
       }
     }
   }
