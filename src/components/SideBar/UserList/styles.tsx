@@ -3,14 +3,14 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const userListContainer = css`
   width: 343px;
-  padding: 31px 16px 0 16px;
+  padding: 33px 11px 0 12px;
   background-color: ${colors.bgSecondary};
 
   .user-container {
     display: flex;
     width: 100%;
     height: 45px;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
 
     .user-avater,
     img {
@@ -19,12 +19,11 @@ export const userListContainer = css`
       height: 40px;
       border: 1px solid #f8f8f8;
       border-radius: 5px;
-      margin: 3px 15px 2px 0;
+      margin: 3px 14px 2px 0px;
     }
 
     .user-info-container {
-      display: flex;
-      justify-content: space-between;
+      position: relative;
       width: 100%;
 
       .user-name-container {
@@ -47,9 +46,12 @@ export const userListContainer = css`
       }
 
       .user-status {
+        position: absolute;
+        top: 8px;
+        right: -9px;
         border: 1px solid #ffffff;
         border-radius: 20px;
-        display: flex;
+        display: inline-flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -80,7 +82,7 @@ export const userListContainer = css`
 
       .not-follow {
         width: 60px;
-        height: 29px;
+        height: 28px;
       }
     }
   }
