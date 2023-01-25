@@ -3,6 +3,7 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const homeContainer = {
   desktop: css`
+    height: 900px;
     margin-left: 205px;
 
     .search-container {
@@ -23,6 +24,7 @@ export const homeContainer = {
     }
 
     .page-size-container {
+      padding-bottom: 33px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
       .page-size-title {
@@ -52,6 +54,12 @@ export const homeContainer = {
           letter-spacing: 0.15px;
         }
       }
+    }
+
+    .MuiButtonBase-root {
+      position: absolute;
+      left: 210px;
+      top: 773px;
     }
   `,
   mobile: css`
