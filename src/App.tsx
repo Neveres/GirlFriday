@@ -71,8 +71,8 @@ const App = () => {
         </AppBody>
 
         <Suspense fallback={<div>Loading...</div>}>
-          {/* {shouldShowSideBar && <SideBar />} */}
-          {true && <SideBar />}
+          {shouldShowSideBar && <SideBar />}
+          {/* {true && <SideBar />} */}
         </Suspense>
       </AppContext.Provider>
 
