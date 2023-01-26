@@ -91,7 +91,9 @@ const SearchResult = () => {
           {Content}
         </InfiniteScroll>
       </div>
-      <Button onClick={onClick} text="more" isMobile={isMobile} />
+      {!isMobile && (
+        <Button onClick={onClick} text="more" isMobile={isMobile} />
+      )}
     </div>
   )
 }
