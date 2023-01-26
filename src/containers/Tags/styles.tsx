@@ -10,7 +10,7 @@ export const tagsContainer = {
       font-weight: ${fontWeight.lighter};
       font-size: 30px;
       line-height: 150%;
-      margin: 76px 0 21px 0;
+      margin: 79px 0 24px 0;
     }
 
     .tag-container {
@@ -39,7 +39,7 @@ export const tagsContainer = {
           max-width: 129px;
           height: 50px;
           left: 10px;
-          top: 89px;
+          top: 87px;
 
           border: 4px solid #ffffff;
           border-radius: 8px;
@@ -53,7 +53,6 @@ export const tagsContainer = {
         width: 143px;
         font-weight: ${fontWeight.lighter};
         line-height: 150%;
-        /* margin-top: -3px; */
 
         .tag-sub-title-name {
           height: 22px;

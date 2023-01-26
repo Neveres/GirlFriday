@@ -37,12 +37,13 @@ export const navBarContainer = css`
 
   .navBar-items {
     margin-left: -5px;
+
     .navBar-item {
       text-align: center;
       width: 34px;
       height: 50px;
       margin: auto;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       font-weight: ${fontWeight.lighter};
       font-size: ${fontSize.small};
       line-height: 150%;
@@ -55,6 +56,10 @@ export const navBarContainer = css`
           margin-bottom: -4px;
         }
       }
+    }
+
+    .focused {
+      margin-bottom: 14px;
     }
   }
 `

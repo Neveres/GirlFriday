@@ -31,7 +31,10 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
 
         return (
           isInNavBar && (
-            <div key={path} className="navBar-item">
+            <div
+              key={path}
+              className={`navBar-item ${isFocus ? 'focused' : ''}`}
+            >
               <Link to={path}>
                 {isFocus ? (
                   <>
