@@ -54,6 +54,14 @@ export const theme = {
           root: {
             ...style,
             width: '335px',
+            '& input': {
+              ...style['& input'],
+              width: '335px',
+            },
+            '& .MuiOutlinedInput-notchedOutline': {
+              ...style['& .MuiOutlinedInput-notchedOutline'],
+              width: '335px',
+            },
           },
         },
       },

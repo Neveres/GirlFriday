@@ -63,15 +63,14 @@ export const homeContainer = {
     }
   `,
   mobile: css`
-    margin: 70px 0 0 20px;
+    margin: 76px 0 0 20px;
 
     .search-container {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding-bottom: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 6px;
 
-      .search-container-title {
-        margin: 50px 0 25px 0;
+      .search-header {
+        margin: -6px 0 18px 0;
         font-weight: ${fontWeight.lighter};
         font-size: ${fontSize.xxLarge};
         line-height: 150%;
@@ -80,32 +79,40 @@ export const homeContainer = {
     }
 
     .page-size-container {
+      padding-bottom: 60px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-      .page-size-container-title {
+      .page-size-title {
         font-weight: ${fontWeight.lighter};
         font-size: ${fontSize.xxLarge};
         line-height: 150%;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
       }
 
-      .page-size-container-count {
-        font-weight: ${fontWeight.bolder};
-        font-size: ${fontSize.xxxLarge};
-        line-height: 150%;
-      }
+      .page-size-status {
+        position: relative;
+        margin-bottom: -4px;
 
-      .page-size-container-unit {
-        font-weight: ${fontWeight.lighter};
-        font-size: ${fontSize.xLarge};
-        line-height: 150%;
-        letter-spacing: 0.15px;
+        .page-size-status-count {
+          font-weight: ${fontWeight.bolder};
+          font-size: ${fontSize.xxxLarge};
+          line-height: 150%;
+        }
+
+        .page-size-status-unit {
+          position: absolute;
+          bottom: 15px;
+          left: 65px;
+          font-weight: ${fontWeight.lighter};
+          font-size: ${fontSize.xLarge};
+          line-height: 150%;
+          letter-spacing: 0.15px;
+        }
       }
     }
 
     .MuiButtonBase-root {
-      /* position: absolute;
-      bottom: 80px; */
+      position: absolute;
+      bottom: 150px;
     }
   `,
 }

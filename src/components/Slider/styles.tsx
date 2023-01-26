@@ -12,5 +12,7 @@ export const sliderContainer = {
       }
     }
   `,
-  mobile: css``,
+  mobile: css`
+    margin-left: -3px;
+  `,
 }
