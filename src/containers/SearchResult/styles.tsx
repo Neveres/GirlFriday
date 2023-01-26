@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { colors, fontWeight } from 'src/GlobalCss'
+import { colors, fontWeight, fontSize } from 'src/GlobalCss'
 
 export const searchResultContainer = {
   desktop: css`
@@ -61,35 +61,39 @@ export const searchResultContainer = {
   mobile: css`
     width: 100%;
     height: 100%;
-    margin: 17px 20px 0 20px;
+    margin-left: 20px;
 
     .search-result-header {
+      margin-bottom: 24px;
+
       .search-result-main-header {
-        display: flex;
-        align-items: center;
+        position: relative;
         width: 375px;
         height: 70px;
         margin-bottom: 20px;
 
         svg {
-          width: 40px;
-          height: 40px;
-          margin-right: 20px;
+          position: absolute;
+          top: 15px;
+          left: -10px;
+          width: 43px;
+          height: 43px;
           cursor: pointer;
         }
 
         span {
+          position: absolute;
+          top: 17px;
+          left: 38px;
           font-weight: ${fontWeight.lighter};
-          font-size: 30px;
+          font-size: ${fontSize.xxLarge};
           line-height: 150%;
-          letter-spacing: 0.25px;
         }
       }
 
       .search-result-sub-header {
-        margin-left: 10px;
         font-weight: ${fontWeight.lighter};
-        font-size: 24px;
+        font-size: ${fontSize.xxLarge};
         line-height: 150%;
       }
     }
@@ -99,12 +103,12 @@ export const searchResultContainer = {
       .search-result-item {
         display: inline-block;
         margin-right: 34px;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
 
         img {
           width: 335px;
           height: 222.67px;
-          margin-bottom: 20.33px;
+          margin-bottom: 17.33px;
         }
 
         .search-result-item-name {
