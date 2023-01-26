@@ -4,18 +4,19 @@ import { colors, fontWeight } from 'src/GlobalCss'
 export const searchResultContainer = {
   desktop: css`
     width: 809px;
-    margin-left: 160px;
-    margin-top: 40px;
+    margin-left: 153px;
+    margin-top: 90px;
 
     .search-result-header {
       display: flex;
       align-items: center;
+      margin-left: 1px;
       margin-bottom: 25px;
 
       svg {
-        width: 40px;
-        height: 40px;
-        margin-right: 20px;
+        width: 43px;
+        height: 43px;
+        margin-right: 16px;
         cursor: pointer;
       }
 
@@ -28,7 +29,7 @@ export const searchResultContainer = {
     }
 
     .search-result-content {
-      margin-left: 50px;
+      margin-left: 53px;
       .search-result-item {
         display: inline-block;
         margin-right: 34px;
@@ -37,7 +38,7 @@ export const searchResultContainer = {
         img {
           width: 219px;
           height: 146px;
-          margin-bottom: 5px;
+          margin-bottom: 7px;
         }
 
         .search-result-item-name {
