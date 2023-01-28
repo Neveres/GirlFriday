@@ -49,7 +49,9 @@ const Home = () => {
         <div className="page-size-status">
           {/* <span className="page-size-status-count">30 </span> */}
           <span className="page-size-status-count">{pageSize} </span>
-          <span className="page-size-status-unit">results</span>
+          <span className="page-size-status-unit">{`result${
+            isMobile ? '' : 's'
+          }`}</span>
         </div>
         <Slider value={pageSize} setValue={setPageSize} isMobile={isMobile} />
       </div>

@@ -61,6 +61,7 @@ export const theme = {
             '& .MuiOutlinedInput-notchedOutline': {
               ...style['& .MuiOutlinedInput-notchedOutline'],
               width: '335px',
+              height: '64px',
             },
           },
         },
