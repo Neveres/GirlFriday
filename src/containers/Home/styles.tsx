@@ -67,7 +67,7 @@ export const homeContainer = {
 
     .search-container {
       padding-bottom: 20px;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
 
       .search-header {
         margin: -6px 0 18px 0;
@@ -85,12 +85,12 @@ export const homeContainer = {
         font-weight: ${fontWeight.lighter};
         font-size: ${fontSize.xxLarge};
         line-height: 150%;
-        margin-bottom: 6px;
+        margin-bottom: 5px;
       }
 
       .page-size-status {
         position: relative;
-        margin-bottom: -4px;
+        margin-bottom: -3px;
 
         .page-size-status-count {
           font-weight: ${fontWeight.bolder};

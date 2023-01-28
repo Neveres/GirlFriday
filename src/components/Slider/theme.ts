@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material'
-import { colors } from 'src/GlobalCss'
+import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 const styleOverrides = {
   root: {
@@ -51,6 +51,14 @@ export const theme = {
           root: {
             ...styleOverrides.root,
             width: '343px',
+            '& .MuiSlider-markLabel': {
+              ...styleOverrides.root['& .MuiSlider-markLabel'],
+              top: '40px',
+              fontWeight: fontWeight.lighter,
+              fontSize: fontSize.large,
+              lineHeight: '150%',
+              letterSpacing: '0.25px',
+            },
           },
         },
       },
