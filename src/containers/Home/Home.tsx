@@ -9,7 +9,7 @@ import { homeContainer } from './styles'
 const Home = () => {
   const navigate = useNavigate()
   const {
-    state: { isMobile, searchParameters },
+    state: { isMobile, searchParameters, layout },
     actions: { setSearchParameters },
   } = useContext(AppContext)
   const [keyword, setKeyword] = useState('')
@@ -39,10 +39,10 @@ const Home = () => {
   }, [keyword, navigate, pageSize, set, setSearchParameters])
 
   return (
-    <div css={isMobile ? homeContainer.mobile : homeContainer.desktop}>
+    <div css={homeContainer[layout]}>
       <div className="search-container">
         <div className="search-header">Search</div>
-        <Input value={keyword} onChange={onChange} isMobile={isMobile} />
+        <Input value={keyword} onChange={onChange} layout={layout} />
       </div>
       <div className="page-size-container">
         <div className="page-size-title"># Of Results Per Page</div>
@@ -53,9 +53,9 @@ const Home = () => {
             isMobile ? '' : 's'
           }`}</span>
         </div>
-        <Slider value={pageSize} setValue={setPageSize} isMobile={isMobile} />
+        <Slider value={pageSize} setValue={setPageSize} layout={layout} />
       </div>
-      <Button onClick={onClick} text="search" isMobile={isMobile} />
+      <Button onClick={onClick} text="search" layout={layout} />
     </div>
   )
 }

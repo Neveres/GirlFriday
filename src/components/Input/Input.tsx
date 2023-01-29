@@ -5,12 +5,12 @@ import { theme } from './theme'
 interface IInput {
   value: string
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-  isMobile: boolean
+  layout: string
 }
 
-const Input: React.FC<IInput> = ({ value, onChange, isMobile }) => {
+const Input: React.FC<IInput> = ({ value, onChange, layout }) => {
   return (
-    <ThemeProvider theme={isMobile ? theme.mobile : theme.desktop}>
+    <ThemeProvider theme={theme[layout]}>
       <TextField value={value} onChange={onChange} placeholder="Keyword" />
     </ThemeProvider>
   )

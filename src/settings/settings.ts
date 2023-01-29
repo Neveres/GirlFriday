@@ -10,6 +10,6 @@ export const FALLBACK_IMAGE =
 export const DEFAULT_PARAMS_OF_USER_LIST = { page: 1, pageSize: 10 }
 
 export enum Layout {
-  Mobile = 'Mobile',
-  Desktop = 'Desktop',
+  Mobile = 'mobile',
+  Desktop = 'desktop',
 }

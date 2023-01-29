@@ -1,7 +1,7 @@
-import { css } from '@emotion/react'
+import { css, SerializedStyles } from '@emotion/react'
 import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
-export const homeContainer = {
+export const homeContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     height: 900px;
     margin-left: 205px;

@@ -8,7 +8,7 @@ import { sliderContainer } from './styles'
 interface ISlider {
   value: number
   setValue: (value: number) => void
-  isMobile: boolean
+  layout: string
 }
 
 const markMaps: {
@@ -73,11 +73,8 @@ const markMaps: {
   },
 }
 
-const Slider: React.FC<ISlider> = ({ value, setValue, isMobile }) => {
-  const markMap = useMemo(
-    () => (isMobile ? markMaps.mobile : markMaps.desktop),
-    [isMobile],
-  )
+const Slider: React.FC<ISlider> = ({ value, setValue, layout }) => {
+  const markMap = useMemo(() => markMaps[layout], [layout])
 
   const marks = Object.keys(markMap)
     .map((key) => ({ ...markMap[key] }))
@@ -95,8 +92,8 @@ const Slider: React.FC<ISlider> = ({ value, setValue, isMobile }) => {
   )
 
   return (
-    <div css={isMobile ? sliderContainer.mobile : sliderContainer.desktop}>
-      <ThemeProvider theme={isMobile ? theme.mobile : theme.desktop}>
+    <div css={sliderContainer[layout]}>
+      <ThemeProvider theme={theme[layout]}>
         <MuiSlider
           value={trasnformedValue}
           valueLabelDisplay="auto"

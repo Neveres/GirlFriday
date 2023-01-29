@@ -1,6 +1,6 @@
-import { css } from '@emotion/react'
+import { css, SerializedStyles } from '@emotion/react'
 
-export const sliderContainer = {
+export const sliderContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     .MuiSlider-root {
       span:nth-of-type(4) {

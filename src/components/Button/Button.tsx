@@ -5,12 +5,12 @@ import { theme } from './theme'
 interface IButton {
   onClick: () => void
   text: string
-  isMobile: boolean
+  layout: string
 }
 
-const Button: React.FC<IButton> = ({ onClick, text, isMobile }) => {
+const Button: React.FC<IButton> = ({ onClick, text, layout }) => {
   return (
-    <ThemeProvider theme={isMobile ? theme.mobile : theme.desktop}>
+    <ThemeProvider theme={theme[layout]}>
       <MuiButton className="mobile" onClick={onClick}>
         {text}
       </MuiButton>

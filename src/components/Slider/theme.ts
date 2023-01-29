@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material'
+import { createTheme, Theme } from '@mui/material'
 import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 const styleOverrides = {
@@ -33,7 +33,7 @@ const styleOverrides = {
   },
 }
 
-export const theme = {
+export const theme: { [index: string]: Theme } = {
   desktop: createTheme({
     components: {
       MuiSlider: {

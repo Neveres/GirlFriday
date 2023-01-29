@@ -40,7 +40,7 @@ const App = () => {
       setSideBar(showSideBar: boolean) {
         dispatch({ type: SET_SIDE_BAR, ...state, showSideBar })
       },
-      setLayout(layout: GirlFriday.keyOfLayout) {
+      setLayout(layout: string) {
         dispatch({ type: SET_LAYOUT, ...state, layout })
       },
     }),

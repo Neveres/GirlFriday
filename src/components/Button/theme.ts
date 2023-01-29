@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material'
+import { createTheme, Theme } from '@mui/material'
 import { colors } from 'src/GlobalCss'
 
 const style = {
@@ -16,7 +16,7 @@ const style = {
   },
 }
 
-export const theme = {
+export const theme: { [index: string]: Theme } = {
   desktop: createTheme({
     components: {
       MuiButton: {

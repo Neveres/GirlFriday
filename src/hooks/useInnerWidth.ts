@@ -8,14 +8,13 @@ export const useInnerWidth = ({
 }: {
   setMobile: (isMobile: boolean) => void
   setSideBar: (showSideBar: boolean) => void
-  setLayout: (layout: GirlFriday.keyOfLayout) => void
+  setLayout: (layout: string) => void
 }) => {
   const handleWindowSizeChange = useCallback(() => {
-    setMobile(window.innerWidth <= threshold.mobile)
+    const isMobile = window.innerWidth <= threshold.mobile
+    setMobile(isMobile)
     setSideBar(window.innerWidth >= threshold.sideBar)
-    setLayout(
-      window.innerWidth <= threshold.mobile ? Layout.Mobile : Layout.Desktop,
-    )
+    setLayout(isMobile ? Layout.Mobile : Layout.Desktop)
   }, [setLayout, setMobile, setSideBar])
 
   useEffect(() => {

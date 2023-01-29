@@ -9,7 +9,7 @@ import { tagsContainer } from './styles'
 const Tags = () => {
   const navigate = useNavigate()
   const {
-    state: { isMobile },
+    state: { isMobile, layout },
   } = useContext(AppContext)
 
   const { tags } = useTags()
@@ -35,7 +35,7 @@ const Tags = () => {
   )
 
   return (
-    <div css={isMobile ? tagsContainer.mobile : tagsContainer.desktop}>
+    <div css={tagsContainer[layout]}>
       {isMobile ? (
         <div className="tags-header">
           <KeyboardArrowLeftIcon onClick={backToHomePage} />
