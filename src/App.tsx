@@ -50,6 +50,7 @@ const App = () => {
   useInnerWidth({
     setMobile: actions.setMobile,
     setSideBar: actions.setSideBar,
+    setLayout: actions.setLayout,
   })
 
   const valueOfAppContext = useMemo(

@@ -1,17 +1,22 @@
 import { useEffect, useCallback } from 'react'
-import { threshold } from 'src/settings'
+import { threshold, Layout } from 'src/settings'
 
 export const useInnerWidth = ({
   setMobile,
   setSideBar,
+  setLayout,
 }: {
   setMobile: (isMobile: boolean) => void
   setSideBar: (showSideBar: boolean) => void
+  setLayout: (layout: GirlFriday.keyOfLayout) => void
 }) => {
   const handleWindowSizeChange = useCallback(() => {
     setMobile(window.innerWidth <= threshold.mobile)
     setSideBar(window.innerWidth >= threshold.sideBar)
-  }, [setMobile, setSideBar])
+    setLayout(
+      window.innerWidth <= threshold.mobile ? Layout.Mobile : Layout.Desktop,
+    )
+  }, [setLayout, setMobile, setSideBar])
 
   useEffect(() => {
     handleWindowSizeChange()
