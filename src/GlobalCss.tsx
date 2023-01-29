@@ -19,6 +19,13 @@ export const GlobalCss = () => (
         min-height: 100vh;
         position: relative;
       }
+
+      .mobile-page-title {
+        font-weight: ${fontWeight.lighter};
+        font-size: ${fontSize.xxLarge};
+        line-height: 150%;
+        margin-bottom: 24px;
+      }
     `}
   />
 )
