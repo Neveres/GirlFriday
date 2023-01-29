@@ -1,8 +1,6 @@
 export = GirlFriday
 export as namespace GirlFriday
 
-import { Layout } from 'src/settings'
-
 declare namespace GirlFriday {
   type NavBarItem = {
     name: string
@@ -32,14 +30,12 @@ declare namespace GirlFriday {
     keyword?: string
   }
 
-  type keyOfLayout = keyof typeof Layout
-
   declare namespace AppContext {
     type State = {
       searchParameters: SearchParameters
       isMobile: boolean
       showSideBar: boolean
-      layout: keyOfLayout
+      layout: string
     }
 
     type Action = State & {
@@ -50,7 +46,7 @@ declare namespace GirlFriday {
       setSearchParameters(searchParameters: SearchParameters): void
       setMobile(isMobile: boolean): void
       setSideBar(showSideBar: boolean): void
-      setLayout(layout: keyOfLayout): void
+      setLayout(layout: string): void
     }
   }
 }
