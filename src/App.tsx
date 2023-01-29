@@ -5,7 +5,7 @@ import { Routes } from 'src/Routes'
 import { useInnerWidth } from 'src/hooks'
 import {
   reducer,
-  SET_MOBILE,
+  SET_MOBILE_LAYOUT,
   SET_SEARCH_PARAMETERS,
   SET_SIDE_BAR,
   SET_LAYOUT,
@@ -15,7 +15,7 @@ import { Layout } from 'src/settings'
 import { GlobalCss } from './GlobalCss'
 
 const initialState = {
-  isMobile: false,
+  isMobileLayout: false,
   searchParameters: {
     page: 1,
     pageSize: 6,
@@ -34,8 +34,8 @@ const App = () => {
       setSearchParameters(searchParameters: GirlFriday.SearchParameters) {
         dispatch({ type: SET_SEARCH_PARAMETERS, ...state, searchParameters })
       },
-      setMobile(isMobile: boolean) {
-        dispatch({ type: SET_MOBILE, ...state, isMobile })
+      setMobileLayout(isMobileLayout: boolean) {
+        dispatch({ type: SET_MOBILE_LAYOUT, ...state, isMobileLayout })
       },
       setSideBar(showSideBar: boolean) {
         dispatch({ type: SET_SIDE_BAR, ...state, showSideBar })
@@ -48,7 +48,7 @@ const App = () => {
   )
 
   useInnerWidth({
-    setMobile: actions.setMobile,
+    setMobileLayout: actions.setMobileLayout,
     setSideBar: actions.setSideBar,
     setLayout: actions.setLayout,
   })

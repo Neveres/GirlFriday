@@ -17,7 +17,7 @@ interface INavBar {
 
 const NavBar: React.FC<INavBar> = ({ pathname }) => {
   const {
-    state: { isMobile },
+    state: { isMobileLayout },
   } = useContext(AppContext)
 
   const MenuItems = useMemo(
@@ -39,7 +39,7 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
                 {isFocus ? (
                   <>
                     <img src={union_light} />
-                    {!isMobile && name}
+                    {!isMobileLayout && name}
                   </>
                 ) : (
                   <img src={union_dark} />
@@ -49,7 +49,7 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
           )
         )
       }),
-    [isMobile, pathname],
+    [isMobileLayout, pathname],
   )
 
   const withNavBar = useMemo(
@@ -57,7 +57,7 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
     [pathname],
   )
 
-  return isMobile ? (
+  return isMobileLayout ? (
     withNavBar ? (
       <>
         <div css={navBarHeaderContainer}>

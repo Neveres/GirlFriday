@@ -11,7 +11,7 @@ import { searchResultContainer } from './styles'
 const SearchResult = () => {
   const navigate = useNavigate()
   const {
-    state: { isMobile, searchParameters, layout },
+    state: { isMobileLayout, searchParameters, layout },
     actions: { setSearchParameters },
   } = useContext(AppContext)
 
@@ -63,7 +63,7 @@ const SearchResult = () => {
 
   return (
     <div css={searchResultContainer[layout]}>
-      {isMobile ? (
+      {isMobileLayout ? (
         <div className="search-result-header">
           <div className="search-result-main-header">
             <KeyboardArrowLeftIcon onClick={backToHomePage} />
@@ -87,7 +87,9 @@ const SearchResult = () => {
           {Content}
         </InfiniteScroll>
       </div>
-      {!isMobile && <Button onClick={onClick} text="more" layout={layout} />}
+      {!isMobileLayout && (
+        <Button onClick={onClick} text="more" layout={layout} />
+      )}
     </div>
   )
 }

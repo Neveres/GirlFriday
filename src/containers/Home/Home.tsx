@@ -9,7 +9,7 @@ import { homeContainer } from './styles'
 const Home = () => {
   const navigate = useNavigate()
   const {
-    state: { isMobile, searchParameters, layout },
+    state: { isMobileLayout, searchParameters, layout },
     actions: { setSearchParameters },
   } = useContext(AppContext)
   const [keyword, setKeyword] = useState('')
@@ -50,7 +50,7 @@ const Home = () => {
           {/* <span className="page-size-status-count">30 </span> */}
           <span className="page-size-status-count">{pageSize} </span>
           <span className="page-size-status-unit">{`result${
-            isMobile ? '' : 's'
+            isMobileLayout ? '' : 's'
           }`}</span>
         </div>
         <Slider value={pageSize} setValue={setPageSize} layout={layout} />

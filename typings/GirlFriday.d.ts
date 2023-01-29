@@ -33,7 +33,7 @@ declare namespace GirlFriday {
   declare namespace AppContext {
     type State = {
       searchParameters: SearchParameters
-      isMobile: boolean
+      isMobileLayout: boolean
       showSideBar: boolean
       layout: string
     }
@@ -44,7 +44,7 @@ declare namespace GirlFriday {
 
     type Actions = {
       setSearchParameters(searchParameters: SearchParameters): void
-      setMobile(isMobile: boolean): void
+      setMobileLayout(isMobileLayout: boolean): void
       setSideBar(showSideBar: boolean): void
       setLayout(layout: string): void
     }
