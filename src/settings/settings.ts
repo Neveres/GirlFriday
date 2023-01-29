@@ -8,3 +8,8 @@ export const FALLBACK_IMAGE =
   'https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg'
 
 export const DEFAULT_PARAMS_OF_USER_LIST = { page: 1, pageSize: 10 }
+
+export enum Layout {
+  Mobile = 'Mobile',
+  Desktop = 'Desktop',
+}

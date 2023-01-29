@@ -8,8 +8,10 @@ import {
   SET_MOBILE,
   SET_SEARCH_PARAMETERS,
   SET_SIDE_BAR,
+  SET_LAYOUT,
   pathWithSideBar,
 } from 'src/libraries'
+import { Layout } from 'src/settings'
 import { GlobalCss } from './GlobalCss'
 
 const initialState = {
@@ -20,6 +22,7 @@ const initialState = {
     keyword: '',
   } as GirlFriday.SearchParameters,
   showSideBar: false,
+  layout: Layout.Desktop,
 }
 
 const App = () => {
@@ -36,6 +39,9 @@ const App = () => {
       },
       setSideBar(showSideBar: boolean) {
         dispatch({ type: SET_SIDE_BAR, ...state, showSideBar })
+      },
+      setLayout(layout: GirlFriday.keyOfLayout) {
+        dispatch({ type: SET_LAYOUT, ...state, layout })
       },
     }),
     [state],
