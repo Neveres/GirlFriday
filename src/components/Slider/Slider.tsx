@@ -82,9 +82,8 @@ const Slider: React.FC<ISlider> = ({ value, setValue, isMobile }) => {
   const marks = Object.keys(markMap)
     .map((key) => ({ ...markMap[key] }))
     .sort((a, b) => a.value - b.value)
-  const scale = (value: number) => {
-    return markMap[value].label
-  }
+
+  const scale = (value: number) => markMap[value].label
 
   const onChange: SliderUnstyledOwnProps['onChange'] = (event, newValue) => {
     setValue(markMap[newValue as number].label)
@@ -92,7 +91,7 @@ const Slider: React.FC<ISlider> = ({ value, setValue, isMobile }) => {
 
   const trasnformedValue = useMemo(
     () => marks.find((mark) => mark.label === value)?.value,
-    [value],
+    [marks, value],
   )
 
   return (
