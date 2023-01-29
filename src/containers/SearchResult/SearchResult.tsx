@@ -3,9 +3,10 @@ import React, { useContext, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import { AppContext, Button } from 'src/components'
+import { AppContext, Button, MobileHeader } from 'src/components'
 import { useUsers, useStorage } from 'src/hooks'
 import { STORAGE_KEY_OF_SEARCH_PARAMETERS, FALLBACK_IMAGE } from 'src/settings'
+import { PagePath } from 'src/Routes'
 import { searchResultContainer } from './styles'
 
 const SearchResult = () => {
@@ -58,19 +59,16 @@ const SearchResult = () => {
   }, [increasePage])
 
   const backToHomePage = useCallback(() => {
-    navigate('/home')
+    navigate(PagePath.Home)
   }, [navigate])
 
   return (
     <div css={searchResultContainer[layout]}>
       {isMobileLayout ? (
-        <div className="search-result-header">
-          <div className="search-result-main-header">
-            <KeyboardArrowLeftIcon onClick={backToHomePage} />
-            <span>Home Page</span>
-          </div>
-          <div className="search-result-sub-header">Results</div>
-        </div>
+        <>
+          <MobileHeader />
+          <div className="mobile-page-title">Results</div>
+        </>
       ) : (
         <div className="search-result-header">
           <KeyboardArrowLeftIcon onClick={backToHomePage} />

@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react'
-import { colors, fontWeight, fontSize } from 'src/GlobalCss'
+import { colors, fontWeight } from 'src/GlobalCss'
 
 export const searchResultContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
@@ -60,46 +60,9 @@ export const searchResultContainer: { [index: string]: SerializedStyles } = {
   `,
   mobile: css`
     width: 100%;
-    height: 100%;
     margin-left: 20px;
 
-    .search-result-header {
-      margin-bottom: 24px;
-
-      .search-result-main-header {
-        position: relative;
-        width: 375px;
-        height: 70px;
-        margin-bottom: 20px;
-
-        svg {
-          position: absolute;
-          top: 15px;
-          left: -10px;
-          width: 43px;
-          height: 43px;
-          cursor: pointer;
-        }
-
-        span {
-          position: absolute;
-          top: 17px;
-          left: 38px;
-          font-weight: ${fontWeight.lighter};
-          font-size: ${fontSize.xxLarge};
-          line-height: 150%;
-        }
-      }
-
-      .search-result-sub-header {
-        font-weight: ${fontWeight.lighter};
-        font-size: ${fontSize.xxLarge};
-        line-height: 150%;
-      }
-    }
-
     .search-result-content {
-      width: 100%;
       .search-result-item {
         display: inline-block;
         margin-right: 34px;

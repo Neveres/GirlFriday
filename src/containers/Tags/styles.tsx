@@ -75,40 +75,6 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
     width: 100%;
     margin-left: 20px;
 
-    .tags-header {
-      position: relative;
-      align-items: center;
-      width: 375px;
-      height: 70px;
-      margin-bottom: 20px;
-
-      svg {
-        position: absolute;
-        top: 15px;
-        left: -10px;
-        width: 43px;
-        height: 43px;
-        margin-right: 20px;
-        cursor: pointer;
-      }
-
-      span {
-        position: absolute;
-        top: 17px;
-        left: 38px;
-        font-weight: ${fontWeight.lighter};
-        font-size: ${fontSize.xxLarge};
-        line-height: 150%;
-      }
-    }
-
-    .page-title {
-      font-weight: ${fontWeight.lighter};
-      font-size: ${fontSize.xxLarge};
-      line-height: 150%;
-      margin: 0 0 24px 0;
-    }
-
     .tag-container {
       width: 150px;
       height: 199px;
