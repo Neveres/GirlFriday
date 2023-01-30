@@ -2,8 +2,8 @@ import { css } from '@emotion/react'
 import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const navBarContainer = css`
+  position: absolute;
   box-sizing: border-box;
-  position: fixed;
   width: 80px;
   height: 100vh;
   left: 0px;
