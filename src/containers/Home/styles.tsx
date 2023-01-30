@@ -24,7 +24,7 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     }
 
     .page-size-container {
-      padding-bottom: 33px;
+      padding-bottom: 31px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
       .page-size-title {
@@ -59,7 +59,7 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     .MuiButtonBase-root {
       position: absolute;
       left: 210px;
-      top: 773px;
+      top: 774px;
     }
   `,
   mobile: css`

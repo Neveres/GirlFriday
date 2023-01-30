@@ -14,6 +14,7 @@ const style = {
     backgroundColor: '#121212',
     color: colors.textWhite,
   },
+  padding: '6px 8px 6px 9px',
 }
 
 export const theme: { [index: string]: Theme } = {
