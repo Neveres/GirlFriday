@@ -12,18 +12,18 @@ export const navBarContainer = css`
   background-color: ${colors.bgSecondary};
 
   .navBar-logo-container {
-    width: 80px;
+    width: 100%;
     height: 88px;
     left: 0px;
     top: 0px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 
     .navBar-logo {
       position: absolute;
       width: 35px;
       height: 15px;
-      left: 19px;
-      top: 35px;
+      left: 23px;
+      top: 37px;
       font-weight: ${fontWeight.bolder};
       font-size: ${fontSize.medium};
       line-height: 15px;
@@ -36,7 +36,7 @@ export const navBarContainer = css`
   }
 
   .navBar-items {
-    margin-left: -5px;
+    margin-left: 2px;
 
     .navBar-item {
       text-align: center;
