@@ -55,4 +55,5 @@ export const colors = {
   bgSecondary: '#1B1B1B',
   textWhite: '#ffffff',
   textGray: '#b2b2b2',
+  textBlack: '#121212',
 }
