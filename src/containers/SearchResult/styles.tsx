@@ -4,7 +4,7 @@ import { colors, fontWeight } from 'src/GlobalCss'
 export const searchResultContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     width: 812px;
-    margin: 94px 0 0 158px;
+    margin: 93px 0 0 157px;
 
     .search-result-header {
       display: flex;
