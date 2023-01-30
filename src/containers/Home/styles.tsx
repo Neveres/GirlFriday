@@ -4,15 +4,15 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 export const homeContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     height: 900px;
-    margin-left: 205px;
+    margin: 55px 0 0 210px;
 
     .search-container {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding-bottom: 27px;
-      margin-bottom: 30px;
+      margin-bottom: 31px;
 
       .search-header {
-        margin: 52px 0 22px 0;
+        margin-bottom: 21px;
         font-weight: ${fontWeight.lighter};
         font-size: ${fontSize.xxLarge};
         line-height: 150%;
@@ -36,7 +36,7 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
 
       .page-size-status {
         position: relative;
-        margin-bottom: 3px;
+        margin-bottom: 4px;
 
         .page-size-status-count {
           font-weight: ${fontWeight.bolder};
