@@ -36,7 +36,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
           max-width: 135px;
           padding: 9px 11px;
           font-size: ${fontSize.xxLarge};
-          border: 4px solid #ffffff;
+          border: 4px solid ${colors.textWhite};
           border-radius: 8px;
           text-overflow: ellipsis;
           white-space: nowrap;
@@ -91,7 +91,6 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
           flex-direction: row;
           align-items: flex-start;
           padding: 8px 14px 7px 10px;
-
           gap: 10px;
 
           position: absolute;
@@ -100,7 +99,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
           left: 10px;
           top: 86px;
           font-size: ${fontSize.xxLarge};
-          border: 4px solid #ffffff;
+          border: 4px solid ${colors.textWhite};
           border-radius: 8px;
           text-overflow: ellipsis;
           white-space: nowrap;

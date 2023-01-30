@@ -1,17 +1,19 @@
 import { createTheme, Theme } from '@mui/material'
-import { colors } from 'src/GlobalCss'
+import { colors, fontFamily, fontWeight, fontSize } from 'src/GlobalCss'
 
 const style = {
   width: '343px',
   height: '40px',
   backgroundColor: colors.textWhite,
   borderRadius: '4px',
-  fontSize: '14px',
+  fontFamily: fontFamily.ubuntu,
+  fontWeight: fontWeight.bolder,
+  fontSize: fontSize.large,
   lineHeight: '100%',
-  color: '#121212',
+  color: colors.textBlack,
   '&:hover': {
     border: `1px solid ${colors.textWhite}`,
-    backgroundColor: '#121212',
+    backgroundColor: colors.textBlack,
     color: colors.textWhite,
   },
   padding: '6px 8px 6px 9px',

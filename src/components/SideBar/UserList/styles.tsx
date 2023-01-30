@@ -49,7 +49,7 @@ export const userListContainer = css`
       .user-status {
         position: absolute;
         box-sizing: border-box;
-        border: 1px solid #ffffff;
+        border: 1px solid ${colors.textWhite};
         border-radius: 20px;
         display: inline-flex;
         justify-content: center;
@@ -61,7 +61,7 @@ export const userListContainer = css`
           font-size: ${fontSize.small};
           font-weight: ${fontWeight.bold};
           line-height: 100%;
-          color: #121212;
+          color: ${colors.textBlack};
         }
 
         .user-status-not-follow {
