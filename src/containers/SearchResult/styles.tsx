@@ -4,14 +4,13 @@ import { colors, fontWeight } from 'src/GlobalCss'
 export const searchResultContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     width: 812px;
-    margin-left: 156px;
-    margin-top: 95px;
+    margin: 94px 0 0 158px;
 
     .search-result-header {
       display: flex;
       align-items: center;
       margin-left: 1px;
-      margin-bottom: 22px;
+      margin-bottom: 23px;
 
       svg {
         width: 43px;

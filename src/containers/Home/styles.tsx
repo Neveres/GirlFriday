@@ -4,7 +4,7 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 export const homeContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     height: 900px;
-    margin: 55px 0 0 210px;
+    margin: 54px 0 0 210px;
 
     .search-container {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);

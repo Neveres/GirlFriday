@@ -4,21 +4,20 @@ import { colors, fontWeight, fontSize } from 'src/GlobalCss'
 export const tagsContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     width: 875px;
-    margin-left: 334px;
+    margin: 82px 0 0 336px;
 
     .page-title {
       font-weight: ${fontWeight.lighter};
       font-size: 30px;
       line-height: 150%;
-      margin: 79px 0 24px 0;
+      margin: 79px 0 23px 0;
     }
 
     .tag-container {
+      display: inline-block;
       width: 150px;
       height: 199px;
-      display: inline-block;
-      margin-right: 25px;
-      margin-bottom: 37px;
+      margin: 0 25px 37px 0;
 
       .tag-big-title {
         position: relative;

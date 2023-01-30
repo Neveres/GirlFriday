@@ -3,7 +3,6 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const navBarContainer = css`
   position: absolute;
-  box-sizing: border-box;
   width: 80px;
   height: 100vh;
   left: 0px;
@@ -16,14 +15,14 @@ export const navBarContainer = css`
     height: 88px;
     left: 0px;
     top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 
     .navBar-logo {
       position: absolute;
       width: 35px;
       height: 15px;
       left: 23px;
-      top: 37px;
+      top: 36px;
       font-weight: ${fontWeight.bolder};
       font-size: ${fontSize.medium};
       line-height: 15px;
@@ -43,7 +42,8 @@ export const navBarContainer = css`
       width: 34px;
       height: 50px;
       margin: auto;
-      margin-bottom: 16px;
+      margin-top: 1px;
+      margin-bottom: 14px;
       font-weight: ${fontWeight.lighter};
       font-size: ${fontSize.small};
       line-height: 150%;
@@ -59,7 +59,7 @@ export const navBarContainer = css`
     }
 
     .focused {
-      margin-bottom: 14px;
+      margin-bottom: 13px;
     }
   }
 `
