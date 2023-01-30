@@ -7,7 +7,7 @@ export const sideBarContainer = css`
   top: 0px;
   width: 375px;
   height: 100%;
-  padding-top: 15px;
+  padding-top: 17px;
   background-color: ${colors.bgSecondary};
   overflow: hidden;
 
@@ -16,6 +16,6 @@ export const sideBarContainer = css`
   }
 
   .MuiButtonBase-root:nth-of-type(2) {
-    padding-left: 23px;
+    padding-left: 14px;
   }
 `

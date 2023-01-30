@@ -49,7 +49,6 @@ export const navBarContainer = css`
       letter-spacing: 0.4px;
 
       a {
-        color: ${colors.textWhite};
         text-decoration: none;
         img {
           margin-bottom: -4px;

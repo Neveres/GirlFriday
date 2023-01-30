@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tabs as MuiTabs, Tab as MuiTab } from '@mui/material'
 import { styled } from '@mui/material/styles'
-import { colors, fontWeight } from 'src/GlobalCss'
+import { colors, fontWeight, fontFamily } from 'src/GlobalCss'
 
 interface IStyledTabProps {
   label: string
@@ -18,12 +18,13 @@ export const Tab = styled((props: IStyledTabProps) => (
   <MuiTab disableRipple {...props} />
 ))(() => ({
   textTransform: 'none',
+  fontFamily: fontFamily.ubuntu,
   fontWeight: fontWeight.lighter,
   color: '#929292',
   fontSize: '16px',
   lineHeight: '150%',
   textAlign: 'center',
-  letterPpacing: '0.15px',
+  letterSpacing: '0.15px',
   opacity: 0.87,
   '&.Mui-selected': {
     color: colors.textWhite,

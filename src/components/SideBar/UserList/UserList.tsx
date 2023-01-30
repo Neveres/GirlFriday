@@ -30,7 +30,7 @@ const UserList: React.FC<IUserList> = ({ users, fetchMoreUser }) => {
           <div className="user-info-container">
             <div className="user-name-container">
               <div className="user-name">{name}</div>
-              <div className="user-username">{username}</div>
+              <div className="user-username">@{username}</div>
             </div>
             <div
               className={`user-status ${isFollowing ? 'follow' : 'not-follow'}`}

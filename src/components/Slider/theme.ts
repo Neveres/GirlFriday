@@ -1,5 +1,5 @@
 import { createTheme, Theme } from '@mui/material'
-import { colors, fontSize, fontWeight } from 'src/GlobalCss'
+import { colors, fontSize, fontWeight, fontFamily } from 'src/GlobalCss'
 
 const styleOverrides = {
   root: {
@@ -7,6 +7,7 @@ const styleOverrides = {
     '& .MuiSlider-markLabel': {
       top: '34px',
       color: colors.textWhite,
+      fontFamily: fontFamily.ubuntu,
       fontWeight: 500,
       fontSize: '16px',
       opacity: 0.5,

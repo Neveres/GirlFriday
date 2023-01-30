@@ -1,5 +1,5 @@
 import { createTheme, Theme } from '@mui/material'
-import { colors, fontSize, fontWeight } from 'src/GlobalCss'
+import { colors, fontFamily, fontSize, fontWeight } from 'src/GlobalCss'
 
 const style = {
   width: '725px',
@@ -11,6 +11,7 @@ const style = {
     height: '60px',
     marginTop: '-1px',
     marginLeft: '4px',
+    fontFamily: fontFamily.ubuntu,
     fontWeight: fontWeight.lighter,
     fontSize: fontSize.large,
     lineHeight: '150%',

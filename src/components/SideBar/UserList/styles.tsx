@@ -3,23 +3,24 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const userListContainer = css`
   width: 343px;
-  padding: 33px 11px 0 12px;
+  padding: 32px 11px 0 16px;
   background-color: ${colors.bgSecondary};
 
   .user-container {
     display: flex;
     width: 100%;
     height: 45px;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
 
     .user-avater,
     img {
+      box-sizing: border-box;
       display: inline-block;
       width: 40px;
       height: 40px;
       border: 1px solid #f8f8f8;
       border-radius: 5px;
-      margin: 3px 14px 2px 0px;
+      margin: 3px 16px 2px 0px;
     }
 
     .user-info-container {
@@ -47,17 +48,16 @@ export const userListContainer = css`
 
       .user-status {
         position: absolute;
+        box-sizing: border-box;
         border: 1px solid #ffffff;
         border-radius: 20px;
         display: inline-flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 10px;
-        height: 28px;
 
         .user-status-follow {
           width: 56px;
+          font-family: 'Open Sans';
           font-size: ${fontSize.small};
           font-weight: ${fontWeight.bold};
           line-height: 100%;
@@ -66,6 +66,7 @@ export const userListContainer = css`
 
         .user-status-not-follow {
           width: 40px;
+          font-family: 'Open Sans';
           font-size: ${fontSize.small};
           font-weight: ${fontWeight.lighter};
           line-height: 100%;
@@ -75,16 +76,18 @@ export const userListContainer = css`
       .follow {
         width: 76px;
         height: 28px;
-        top: 8px;
-        right: -6px;
+        top: 7px;
+        right: 1px;
         background: ${colors.textWhite};
+        letter-spacing: 0.3px;
       }
 
       .not-follow {
         width: 60px;
         height: 28px;
         top: 8px;
-        right: -8px;
+        right: -1px;
+        letter-spacing: 0.3px;
       }
     }
   }
