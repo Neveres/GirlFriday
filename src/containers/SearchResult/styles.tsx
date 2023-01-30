@@ -3,15 +3,15 @@ import { colors, fontWeight } from 'src/GlobalCss'
 
 export const searchResultContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
-    width: 809px;
-    margin-left: 153px;
-    margin-top: 90px;
+    width: 812px;
+    margin-left: 156px;
+    margin-top: 95px;
 
     .search-result-header {
       display: flex;
       align-items: center;
       margin-left: 1px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
 
       svg {
         width: 43px;
@@ -32,8 +32,7 @@ export const searchResultContainer: { [index: string]: SerializedStyles } = {
       margin-left: 53px;
       .search-result-item {
         display: inline-block;
-        margin-right: 34px;
-        margin-bottom: 35px;
+        margin: 0 34px 31px 0;
 
         img {
           width: 219px;
@@ -56,6 +55,10 @@ export const searchResultContainer: { [index: string]: SerializedStyles } = {
           color: ${colors.textGray};
         }
       }
+    }
+
+    .MuiButtonBase-root {
+      margin: 7px 0 0 52px;
     }
   `,
   mobile: css`
