@@ -47,7 +47,6 @@ const Home = () => {
       <div className="page-size-container">
         <div className="page-size-title"># Of Results Per Page</div>
         <div className="page-size-status">
-          {/* <span className="page-size-status-count">30 </span> */}
           <span className="page-size-status-count">{pageSize} </span>
           <span className="page-size-status-unit">{`result${
             isMobileLayout ? '' : 's'

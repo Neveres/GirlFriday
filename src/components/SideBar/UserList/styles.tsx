@@ -86,7 +86,7 @@ export const userListContainer = css`
         width: 60px;
         height: 28px;
         top: 8px;
-        right: -1px;
+        right: -2px;
         letter-spacing: 0.3px;
       }
     }
