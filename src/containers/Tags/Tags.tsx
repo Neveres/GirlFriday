@@ -30,7 +30,9 @@ const Tags = () => {
   return (
     <div css={tagsContainer[layout]}>
       {isMobileLayout && <MobileHeader />}
-      <div className="page-title">Tags</div>
+      <div className={isMobileLayout ? 'mobile-page-title' : 'page-title'}>
+        Tags
+      </div>
       <div>{Content}</div>
     </div>
   )

@@ -3,7 +3,7 @@ import { colors, fontWeight, fontSize } from 'src/GlobalCss'
 
 export const tagsContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
-    width: 875px;
+    width: 870px;
     margin: 81px 0 0 338px;
 
     .page-title {
@@ -28,19 +28,14 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
         margin-bottom: 6px;
 
         .tag-big-title-name {
-          box-sizing: border-box;
-          flex-direction: row;
-          align-items: flex-start;
-          padding: 9px 11px;
-          gap: 10px;
-
           position: absolute;
-          max-width: 135px;
-          height: 50px;
           left: 10px;
           top: 86px;
+          box-sizing: border-box;
+          height: 50px;
+          max-width: 135px;
+          padding: 9px 11px;
           font-size: ${fontSize.xxLarge};
-
           border: 4px solid #ffffff;
           border-radius: 8px;
           text-overflow: ellipsis;

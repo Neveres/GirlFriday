@@ -7,18 +7,15 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     margin: 54px 0 0 210px;
 
     .search-container {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding-bottom: 27px;
       margin-bottom: 31px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
       .search-header {
         margin-bottom: 21px;
         font-weight: ${fontWeight.lighter};
         font-size: ${fontSize.xxLarge};
         line-height: 150%;
-        display: flex;
-        align-items: center;
-        text-transform: capitalize;
         color: ${colors.textWhite};
       }
     }
