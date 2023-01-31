@@ -25,7 +25,7 @@ const style = {
   },
   '& .MuiOutlinedInput-notchedOutline': {
     width: '723px',
-    height: '64px',
+    height: '63.5px',
     boxSizing: 'border-box',
     border: '3px solid rgba(255, 255, 255, 0.5)',
   },
