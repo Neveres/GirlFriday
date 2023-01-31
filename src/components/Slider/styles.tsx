@@ -21,7 +21,7 @@ export const sliderContainer: { [index: string]: SerializedStyles } = {
       }
 
       span:nth-of-type(14) {
-        left: 96.5% !important;
+        left: 96.25% !important;
       }
     }
   `,

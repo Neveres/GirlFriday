@@ -97,7 +97,7 @@ export const navBarHeaderContainer = css`
     font-weight: ${fontWeight.bolder};
     font-size: ${fontSize.medium};
     line-height: 15px;
-    letter-spacing: -0.05em;
+    /* letter-spacing: -0.05em; */
     background: linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -122,8 +122,7 @@ export const navBarFooterContainer = css`
     align-items: center;
 
     .navBar-item {
-      margin-left: 27px;
-      margin-right: 27px;
+      margin: 4px 27px 0 27px;
     }
   }
 `

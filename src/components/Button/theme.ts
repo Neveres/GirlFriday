@@ -38,6 +38,7 @@ export const theme: { [index: string]: Theme } = {
           root: {
             ...style,
             width: '335px',
+            padding: '5px 8px 6px 9px',
           },
         },
       },

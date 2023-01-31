@@ -54,6 +54,7 @@ const Home = () => {
         </div>
         <Slider value={pageSize} setValue={setPageSize} layout={layout} />
       </div>
+      {isMobileLayout && <hr className="mobile-divider"></hr>}
       <Button onClick={onClick} text="search" layout={layout} />
     </div>
   )

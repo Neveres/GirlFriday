@@ -77,8 +77,8 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     }
 
     .page-size-container {
-      padding-bottom: 212px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 214px;
+
       .page-size-title {
         font-weight: ${fontWeight.lighter};
         font-size: ${fontSize.xxLarge};
@@ -108,8 +108,17 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
       }
     }
 
+    .mobile-divider {
+      box-sizing: border-box;
+      width: 335px;
+      height: 1px;
+      margin: 0;
+      border: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     .MuiButtonBase-root {
-      margin-top: 79px;
+      margin-top: 80px;
     }
   `,
 }
