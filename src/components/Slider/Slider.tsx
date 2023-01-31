@@ -24,20 +24,20 @@ const markMaps: {
       value: 0.5,
       label: 3,
     },
-    19.25: {
-      value: 19.25,
+    19.375: {
+      value: 19.375,
       label: 6,
     },
     37.5: {
       value: 37.5,
       label: 9,
     },
-    56.5: {
-      value: 56.5,
+    56.25: {
+      value: 56.25,
       label: 12,
     },
-    74.75: {
-      value: 74.75,
+    74.5: {
+      value: 74.5,
       label: 15,
     },
     99: {

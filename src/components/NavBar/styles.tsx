@@ -22,7 +22,7 @@ export const navBarContainer = css`
       /* width: 35px; */
       height: 15px;
       left: 23px;
-      top: 36px;
+      top: 37px;
       font-weight: ${fontWeight.bolder};
       font-size: ${fontSize.medium};
       line-height: 15px;

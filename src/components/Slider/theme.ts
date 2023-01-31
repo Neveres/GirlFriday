@@ -3,7 +3,7 @@ import { colors, fontSize, fontWeight, fontFamily } from 'src/GlobalCss'
 
 const styleOverrides = {
   root: {
-    width: '724px',
+    width: '725px',
     '& .MuiSlider-markLabel': {
       top: '34px',
       color: colors.textWhite,
@@ -25,6 +25,7 @@ const styleOverrides = {
   },
   track: {
     background: 'linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%)',
+    border: 0,
   },
   thumb: {
     width: '25px',
@@ -40,6 +41,18 @@ export const theme: { [index: string]: Theme } = {
       MuiSlider: {
         styleOverrides: {
           ...styleOverrides,
+          root: {
+            ...styleOverrides.root,
+            padding: '13px 0 !important',
+          },
+          rail: {
+            left: '2px !important',
+          },
+          track: {
+            ...styleOverrides.track,
+            left: '2px !important',
+            height: '8px',
+          },
         },
       },
     },
