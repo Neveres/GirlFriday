@@ -60,14 +60,15 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     }
   `,
   mobile: css`
-    margin: 76px 0 0 20px;
+    width: 375px;
+    margin: 76.5px 0 0 20px;
 
     .search-container {
       padding-bottom: 20px;
       margin-bottom: 7px;
 
       .search-header {
-        margin: -6px 0 18px 0;
+        margin: -6px 0 17px 0;
         font-weight: ${fontWeight.lighter};
         font-size: ${fontSize.xxLarge};
         line-height: 150%;
@@ -76,7 +77,7 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     }
 
     .page-size-container {
-      padding-bottom: 60px;
+      padding-bottom: 212px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       .page-size-title {
         font-weight: ${fontWeight.lighter};
@@ -108,8 +109,7 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     }
 
     .MuiButtonBase-root {
-      position: absolute;
-      bottom: 150px;
+      margin-top: 79px;
     }
   `,
 }

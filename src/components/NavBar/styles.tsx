@@ -83,7 +83,7 @@ export const navBarContainer = css`
 `
 
 export const navBarHeaderContainer = css`
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 70px;
   top: 0;
@@ -106,12 +106,14 @@ export const navBarHeaderContainer = css`
 `
 
 export const navBarFooterContainer = css`
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 66px;
-  bottom: 66px;
+  bottom: 0;
   left: 0;
-  background-color: ${colors.bgSecondary};
+  background: rgba(24, 24, 24, 0.2);
+  box-shadow: inset 0px 0.5px 0px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(27.1828px);
 
   .navBar-items {
     height: 100%;
@@ -120,7 +122,8 @@ export const navBarFooterContainer = css`
     align-items: center;
 
     .navBar-item {
-      margin-right: 40px;
+      margin-left: 27px;
+      margin-right: 27px;
     }
   }
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import { css, Global } from '@emotion/react'
+import { css, Global, SerializedStyles } from '@emotion/react'
 
 export const GlobalCss = () => (
   <Global
@@ -56,4 +56,13 @@ export const colors = {
   textWhite: '#ffffff',
   textGray: '#b2b2b2',
   textBlack: '#121212',
+}
+
+export const appContainer: { [index: string]: SerializedStyles } = {
+  desktop: css``,
+  mobile: css`
+    width: 375px;
+    height: 100%;
+    min-height: 812px;
+  `,
 }

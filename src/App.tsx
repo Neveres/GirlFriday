@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import React, { Suspense, useReducer, useMemo } from 'react'
 import { useLocation } from 'react-router'
 import { NavBar, AppBody, AppContext, SideBar } from 'src/components'
@@ -12,7 +13,7 @@ import {
   pathWithSideBar,
 } from 'src/libraries'
 import { Layout } from 'src/settings'
-import { GlobalCss } from './GlobalCss'
+import { GlobalCss, appContainer } from './GlobalCss'
 
 const initialState = {
   isMobileLayout: false,
@@ -67,7 +68,7 @@ const App = () => {
   )
 
   return (
-    <>
+    <div css={appContainer[state.layout]}>
       <AppContext.Provider value={valueOfAppContext}>
         <NavBar pathname={pathname} />
 
@@ -83,7 +84,7 @@ const App = () => {
       </AppContext.Provider>
 
       <GlobalCss />
-    </>
+    </div>
   )
 }
 
