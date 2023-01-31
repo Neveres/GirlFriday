@@ -10,9 +10,9 @@ export const mobilePageHeader = css`
   svg {
     position: absolute;
     top: 15px;
-    left: -10px;
-    width: 43px;
-    height: 43px;
+    left: -9px;
+    width: 42.5px;
+    height: 42.5px;
     cursor: pointer;
   }
 

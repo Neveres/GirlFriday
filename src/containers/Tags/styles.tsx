@@ -84,7 +84,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
         height: 150px;
         background: rgba(255, 255, 255, 0.06);
         border-radius: 10px;
-        margin-bottom: 7px;
+        margin-bottom: 9px;
 
         .tag-big-title-name {
           box-sizing: border-box;
