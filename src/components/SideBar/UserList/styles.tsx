@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { colors, fontSize, fontWeight } from 'src/GlobalCss'
+import { colors, fontFamily, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const userListContainer = css`
   width: 343px;
@@ -20,7 +20,7 @@ export const userListContainer = css`
       height: 40px;
       border: 1px solid #f8f8f8;
       border-radius: 5px;
-      margin: 3px 16px 2px 0px;
+      margin: 3px 15px 2px 0px;
     }
 
     .user-info-container {
@@ -57,7 +57,7 @@ export const userListContainer = css`
 
         .user-status-follow {
           width: 56px;
-          font-family: 'Open Sans';
+          font-family: ${fontFamily.openSans};
           font-size: ${fontSize.small};
           font-weight: ${fontWeight.bold};
           line-height: 100%;
@@ -66,17 +66,18 @@ export const userListContainer = css`
 
         .user-status-not-follow {
           width: 40px;
-          font-family: 'Open Sans';
+          font-family: ${fontFamily.openSans};
           font-size: ${fontSize.small};
           font-weight: ${fontWeight.lighter};
           line-height: 100%;
+          margin-left: 1px;
         }
       }
 
       .follow {
         width: 76px;
         height: 28px;
-        top: 7px;
+        top: 8px;
         right: 1px;
         background: ${colors.textWhite};
         letter-spacing: 0.3px;
@@ -84,9 +85,9 @@ export const userListContainer = css`
 
       .not-follow {
         width: 60px;
-        height: 28px;
+        height: 29px;
         top: 8px;
-        right: -2px;
+        right: 0;
         letter-spacing: 0.3px;
       }
     }

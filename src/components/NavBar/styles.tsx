@@ -4,7 +4,7 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 export const navBarContainer = css`
   position: absolute;
   width: 80px;
-  height: 100vh;
+  height: 120%;
   left: 0px;
   top: 0px;
   border-right: 1px solid rgba(0, 0, 0, 0.2);

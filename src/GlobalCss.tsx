@@ -48,6 +48,7 @@ export const fontWeight = {
 
 export const fontFamily = {
   ubuntu: 'Ubuntu',
+  openSans: 'Open Sans',
 }
 
 export const colors = {
