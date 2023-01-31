@@ -36,7 +36,7 @@ export const searchResultContainer: { [index: string]: SerializedStyles } = {
         img {
           width: 219px;
           height: 146px;
-          margin-bottom: 7px;
+          margin-bottom: 9px;
         }
 
         .search-result-item-name {
@@ -57,7 +57,7 @@ export const searchResultContainer: { [index: string]: SerializedStyles } = {
     }
 
     .MuiButtonBase-root {
-      margin: 7px 0 0 52px;
+      margin: 7px 0 0 53px;
     }
   `,
   mobile: css`

@@ -19,14 +19,14 @@ export const navBarContainer = css`
 
     .navBar-logo {
       position: absolute;
-      width: 35px;
+      /* width: 35px; */
       height: 15px;
       left: 23px;
       top: 36px;
       font-weight: ${fontWeight.bolder};
       font-size: ${fontSize.medium};
       line-height: 15px;
-      letter-spacing: -0.05em;
+      /* letter-spacing: -0.05em; */
       background: linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

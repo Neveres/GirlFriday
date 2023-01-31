@@ -7,8 +7,8 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     margin: 54px 0 0 210px;
 
     .search-container {
-      padding-bottom: 27px;
-      margin-bottom: 31px;
+      padding-bottom: 28px;
+      margin-bottom: 30px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
       .search-header {
@@ -21,7 +21,7 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     }
 
     .page-size-container {
-      padding-bottom: 31px;
+      padding-bottom: 32.5px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
       .page-size-title {
@@ -56,7 +56,7 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     .MuiButtonBase-root {
       position: absolute;
       left: 210px;
-      top: 774px;
+      top: 773px;
     }
   `,
   mobile: css`

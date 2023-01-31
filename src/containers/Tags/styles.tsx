@@ -4,7 +4,7 @@ import { colors, fontWeight, fontSize } from 'src/GlobalCss'
 export const tagsContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     width: 870px;
-    margin: 81px 0 0 338px;
+    margin: 81px 0 0 337px;
 
     .page-title {
       font-weight: ${fontWeight.lighter};
@@ -17,7 +17,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
       display: inline-block;
       width: 150px;
       height: 199px;
-      margin: 0 24px 37px 0;
+      margin: 0 24px 36px 0;
 
       .tag-big-title {
         position: relative;
@@ -25,7 +25,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
         height: 150px;
         background: rgba(255, 255, 255, 0.06);
         border-radius: 10px;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
 
         .tag-big-title-name {
           position: absolute;
