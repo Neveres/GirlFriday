@@ -57,10 +57,22 @@ export const navBarContainer = css`
     }
 
     .tags {
+      position: relative;
       a {
         img {
           margin-bottom: -3px;
         }
+      }
+
+      .dot {
+        position: absolute;
+        top: -4px;
+        right: 2px;
+        box-sizing: border-box;
+        height: 4.5px;
+        width: 4.5px;
+        background-color: #00d1ff;
+        border-radius: 50%;
       }
     }
 

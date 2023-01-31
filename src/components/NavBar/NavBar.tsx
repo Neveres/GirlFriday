@@ -2,7 +2,7 @@
 import React, { useMemo, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AppContext } from 'src/components'
-import { menuItems } from 'src/Routes'
+import { menuItems, PagePath } from 'src/Routes'
 import union_dark from 'src/assets/union_dark.svg'
 import union_light from 'src/assets/union_light.svg'
 import {
@@ -27,7 +27,9 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
 
         const isFocus =
           pathname === path ||
-          (pathname === '/search-result' && path === '/home')
+          (pathname === PagePath.SearchResult && path === PagePath.Home)
+
+        const isPageTags = pathname === PagePath.Tags
 
         return (
           isInNavBar && (
@@ -47,6 +49,8 @@ const NavBar: React.FC<INavBar> = ({ pathname }) => {
                   <img src={union_dark} />
                 )}
               </Link>
+
+              {!isPageTags && !isFocus && <span className="dot"></span>}
             </div>
           )
         )
