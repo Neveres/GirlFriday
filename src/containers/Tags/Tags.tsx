@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React, { useContext, useMemo } from 'react'
-import { AppContext, MobileHeader } from 'src/components'
+import { AppContext, MobileHeader, LoadingCircular } from 'src/components'
 import { useTags } from 'src/hooks'
 import { tagsContainer } from './styles'
 
@@ -33,7 +33,7 @@ const Tags = () => {
       <div className={isMobileLayout ? 'mobile-page-title' : 'page-title'}>
         Tags
       </div>
-      <div>{Content}</div>
+      <div>{Content.length ? Content : <LoadingCircular />}</div>
     </div>
   )
 }

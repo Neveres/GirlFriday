@@ -3,7 +3,12 @@ import React, { useContext, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import { AppContext, Button, MobileHeader } from 'src/components'
+import {
+  AppContext,
+  Button,
+  MobileHeader,
+  LoadingCircular,
+} from 'src/components'
 import { useUsers, useStorage } from 'src/hooks'
 import { STORAGE_KEY_OF_SEARCH_PARAMETERS, FALLBACK_IMAGE } from 'src/settings'
 import { PagePath } from 'src/Routes'
@@ -80,7 +85,7 @@ const SearchResult = () => {
           dataLength={users.length}
           next={increasePage}
           hasMore={true}
-          loader={null}
+          loader={<LoadingCircular />}
         >
           {Content}
         </InfiniteScroll>

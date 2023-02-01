@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { useMemo, useCallback } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import { LoadingCircular } from 'src/components'
 import { FALLBACK_IMAGE } from 'src/settings'
 import { userListContainer } from './styles'
 
@@ -55,7 +56,7 @@ const UserList: React.FC<IUserList> = ({ users, fetchMoreUser }) => {
       dataLength={users.length}
       next={fetchMoreUser}
       hasMore={true}
-      loader={<h4>Loading...</h4>}
+      loader={<LoadingCircular />}
     >
       {Content}
     </InfiniteScroll>
