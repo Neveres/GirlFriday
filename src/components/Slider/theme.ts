@@ -24,7 +24,7 @@ const styleOverrides = {
     height: '8px',
   },
   track: {
-    background: 'linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%)',
+    background: colors.logo,
     border: 0,
     height: '8px',
   },

@@ -57,6 +57,7 @@ export const colors = {
   textWhite: '#ffffff',
   textGray: '#b2b2b2',
   textBlack: '#121212',
+  logo: 'linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%)',
 }
 
 export const appContainer: { [index: string]: SerializedStyles } = {
