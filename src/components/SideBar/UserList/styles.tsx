@@ -56,11 +56,11 @@ export const userListContainer = css`
         align-items: center;
         letter-spacing: 0.3px;
         font-size: ${fontSize.small};
+        font-weight: ${fontWeight.bold};
 
         .user-status-following {
           width: 56px;
           font-family: ${fontFamily.openSans};
-          font-weight: ${fontWeight.bold};
           line-height: 100%;
           color: ${colors.textBlack};
         }
@@ -72,7 +72,6 @@ export const userListContainer = css`
         .user-status-unfollow {
           width: 40px;
           font-family: ${fontFamily.openSans};
-          font-weight: ${fontWeight.lighter};
           line-height: 100%;
           margin-left: 1px;
         }
