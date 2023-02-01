@@ -8,5 +8,7 @@ describe('utils testing', () => {
       const { path } = menuItems[i]
       expect(pathWithSideBar(path)).toBe(expectedResult[i])
     }
+
+    expect(pathWithSideBar('')).toBe(false)
   })
 })
