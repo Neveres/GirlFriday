@@ -65,19 +65,11 @@ export const userListContainer = css`
           color: ${colors.textBlack};
         }
 
-        .user-status-following:hover {
-          color: ${colors.textWhite};
-        }
-
         .user-status-unfollow {
           width: 40px;
           font-family: ${fontFamily.openSans};
           line-height: 100%;
           margin-left: 1px;
-        }
-
-        .user-status-unfollow:hover {
-          color: ${colors.textBlack};
         }
       }
 
@@ -91,6 +83,9 @@ export const userListContainer = css`
 
       .following:hover {
         background: unset;
+        .user-status-following {
+          color: ${colors.textWhite};
+        }
       }
 
       .unfollow {
@@ -102,6 +97,10 @@ export const userListContainer = css`
 
       .unfollow:hover {
         background: ${colors.textWhite};
+
+        .user-status-unfollow {
+          color: ${colors.textBlack};
+        }
       }
     }
   }
