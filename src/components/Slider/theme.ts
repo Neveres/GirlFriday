@@ -19,13 +19,14 @@ const styleOverrides = {
     '& .MuiSlider-mark': {
       backgroundColor: 'initial',
     },
-    '& .MuiSlider-rail': {
-      height: '8px',
-    },
+  },
+  rail: {
+    height: '8px',
   },
   track: {
     background: 'linear-gradient(270deg, #ffd25f 0.13%, #ff5c01 100%)',
     border: 0,
+    height: '8px',
   },
   thumb: {
     width: '25px',
@@ -46,12 +47,12 @@ export const theme: { [index: string]: Theme } = {
             padding: '13px 0 !important',
           },
           rail: {
+            ...styleOverrides.rail,
             left: '2px !important',
           },
           track: {
             ...styleOverrides.track,
             left: '2px !important',
-            height: '8px',
           },
         },
       },
