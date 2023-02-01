@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should render well under desktop layout 1`] = `
+<div
+  className="css-3i2qem-NavBar"
+>
+  <div
+    className="navBar-logo-container"
+  >
+    <div
+      className="navBar-logo"
+    >
+      LOGO
+    </div>
+  </div>
+  <div
+    className="navBar-items"
+  >
+    <div
+      className="navBar-item home "
+    >
+      <a
+        href="/home"
+        onClick={[Function]}
+      >
+        <img
+          src="union_dark.svg"
+        />
+      </a>
+      <span
+        className="dot"
+      />
+    </div>
+    <div
+      className="navBar-item tags "
+    >
+      <a
+        href="/tags"
+        onClick={[Function]}
+      >
+        <img
+          src="union_dark.svg"
+        />
+      </a>
+      <span
+        className="dot"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NavBar should render well under desktop layout 2`] = `
+<div
+  className="css-3i2qem-NavBar"
+>
+  <div
+    className="navBar-logo-container"
+  >
+    <div
+      className="navBar-logo"
+    >
+      LOGO
+    </div>
+  </div>
+  <div
+    className="navBar-items"
+  >
+    <div
+      className="navBar-item home focused"
+    >
+      <a
+        href="/home"
+        onClick={[Function]}
+      >
+        <img
+          src="union_light.svg"
+        />
+        Home
+      </a>
+    </div>
+    <div
+      className="navBar-item tags "
+    >
+      <a
+        href="/tags"
+        onClick={[Function]}
+      >
+        <img
+          src="union_dark.svg"
+        />
+      </a>
+      <span
+        className="dot"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NavBar should render well under desktop layout 3`] = `
+<div
+  className="css-3i2qem-NavBar"
+>
+  <div
+    className="navBar-logo-container"
+  >
+    <div
+      className="navBar-logo"
+    >
+      LOGO
+    </div>
+  </div>
+  <div
+    className="navBar-items"
+  >
+    <div
+      className="navBar-item home focused"
+    >
+      <a
+        href="/home"
+        onClick={[Function]}
+      >
+        <img
+          src="union_light.svg"
+        />
+        Home
+      </a>
+    </div>
+    <div
+      className="navBar-item tags "
+    >
+      <a
+        href="/tags"
+        onClick={[Function]}
+      >
+        <img
+          src="union_dark.svg"
+        />
+      </a>
+      <span
+        className="dot"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NavBar should render well under desktop layout 4`] = `
+<div
+  className="css-3i2qem-NavBar"
+>
+  <div
+    className="navBar-logo-container"
+  >
+    <div
+      className="navBar-logo"
+    >
+      LOGO
+    </div>
+  </div>
+  <div
+    className="navBar-items"
+  >
+    <div
+      className="navBar-item home "
+    >
+      <a
+        href="/home"
+        onClick={[Function]}
+      >
+        <img
+          src="union_dark.svg"
+        />
+      </a>
+    </div>
+    <div
+      className="navBar-item tags focused"
+    >
+      <a
+        href="/tags"
+        onClick={[Function]}
+      >
+        <img
+          src="union_light.svg"
+        />
+        Tags
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NavBar should render well under mobile layout 1`] = `null`;
+
+exports[`NavBar should render well under mobile layout 2`] = `
+Array [
+  <div
+    className="css-11x547p-NavBar"
+  >
+    <div
+      className="navBar-logo"
+    >
+      LOGO
+    </div>
+  </div>,
+  <div
+    className="css-1utprrj-NavBar"
+  >
+    <div
+      className="navBar-items"
+    >
+      <div
+        className="navBar-item home focused"
+      >
+        <a
+          href="/home"
+          onClick={[Function]}
+        >
+          <img
+            src="union_light.svg"
+          />
+        </a>
+      </div>
+      <div
+        className="navBar-item tags "
+      >
+        <a
+          href="/tags"
+          onClick={[Function]}
+        >
+          <img
+            src="union_dark.svg"
+          />
+        </a>
+        <span
+          className="dot"
+        />
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`NavBar should render well under mobile layout 3`] = `null`;
+
+exports[`NavBar should render well under mobile layout 4`] = `null`;
