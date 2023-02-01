@@ -84,9 +84,7 @@ const App = () => {
           </Suspense>
         </AppBody>
 
-        <Suspense fallback={<LoadingProgress />}>
-          {shouldShowSideBar && <SideBar />}
-        </Suspense>
+        {shouldShowSideBar && <SideBar />}
       </AppContext.Provider>
 
       <GlobalCss />
