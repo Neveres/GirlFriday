@@ -8,9 +8,10 @@ import { userListContainer } from './styles'
 interface IUserList {
   users: GirlFriday.User[]
   fetchMoreUser: () => void
+  hasMore: boolean
 }
 
-const UserList: React.FC<IUserList> = ({ users, fetchMoreUser }) => {
+const UserList: React.FC<IUserList> = ({ users, fetchMoreUser, hasMore }) => {
   const imageOnErrorHandler = useCallback(
     (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
       event.currentTarget.src = FALLBACK_IMAGE
@@ -50,13 +51,18 @@ const UserList: React.FC<IUserList> = ({ users, fetchMoreUser }) => {
     [imageOnErrorHandler, users],
   )
 
+  const Loader = useMemo(
+    () => (hasMore ? <LoadingCircular /> : null),
+    [hasMore],
+  )
+
   return (
     <InfiniteScroll
       css={userListContainer}
       dataLength={users.length}
       next={fetchMoreUser}
-      hasMore={true}
-      loader={<LoadingCircular />}
+      hasMore={hasMore}
+      loader={Loader}
     >
       {Content}
     </InfiniteScroll>

@@ -5,6 +5,13 @@ import { DEFAULT_PARAMS_OF_USER_LIST } from 'src/settings'
 export const useFriends = () => {
   const [page, setPage] = useState(DEFAULT_PARAMS_OF_USER_LIST.page)
   const [friends, setFirends] = useState([] as GirlFriday.User[])
+  const [hasMore, setHasMore] = useState(true)
+
+  const increasePage = useCallback(() => {
+    if (hasMore) {
+      setPage(page + 1)
+    }
+  }, [hasMore, page])
 
   useEffect(() => {
     httpClient
@@ -15,14 +22,18 @@ export const useFriends = () => {
         },
       })
       .then((response) => {
-        setFirends([...friends, ...response.data.data])
+        const {
+          data: { totalPages, data },
+        } = response
+
+        if (page >= totalPages) {
+          setHasMore(false)
+        } else {
+          setFirends([...friends, ...data])
+        }
       })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page])
 
-  const increasePage = useCallback(() => {
-    setPage(page + 1)
-  }, [page])
-
-  return { friends, increasePage }
+  return { friends, increasePage, hasMore }
 }

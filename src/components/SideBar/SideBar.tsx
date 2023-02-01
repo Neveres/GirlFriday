@@ -8,8 +8,16 @@ import { sideBarContainer } from './styles'
 
 const SideBar = () => {
   const [value, setValue] = useState(0)
-  const { users, increasePage: fecthMoreUser } = useUsers()
-  const { friends, increasePage: fetchMoreFriend } = useFriends()
+  const {
+    users,
+    increasePage: fecthMoreUser,
+    hasMore: hasMoreUsers,
+  } = useUsers()
+  const {
+    friends,
+    increasePage: fetchMoreFriend,
+    hasMore: hasMoreFriends,
+  } = useFriends()
 
   const onChange = useCallback(
     (event: React.SyntheticEvent, newValue: number) => {
@@ -26,10 +34,18 @@ const SideBar = () => {
       </Tabs>
 
       <TabPanel value={value} index={0}>
-        <UserList users={users} fetchMoreUser={fecthMoreUser} />
+        <UserList
+          users={users}
+          fetchMoreUser={fecthMoreUser}
+          hasMore={hasMoreUsers}
+        />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <UserList users={friends} fetchMoreUser={fetchMoreFriend} />
+        <UserList
+          users={friends}
+          fetchMoreUser={fetchMoreFriend}
+          hasMore={hasMoreFriends}
+        />
       </TabPanel>
     </div>
   )
