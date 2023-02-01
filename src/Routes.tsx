@@ -4,12 +4,14 @@ import { Navigate, useRoutes } from 'react-router-dom'
 const Home = lazy(() => import('src/containers/Home'))
 const SearchResult = lazy(() => import('src/containers/SearchResult'))
 const Tags = lazy(() => import('src/containers/Tags'))
+const AllComponents = lazy(() => import('src/containers/AllComponents'))
 
 export enum PagePath {
   Root = '/',
   Home = '/home',
   SearchResult = '/search-result',
   Tags = '/tags',
+  AllComponents = '/all-components',
 }
 
 export const menuItems: GirlFriday.NavBarItem[] = [
@@ -34,6 +36,13 @@ export const menuItems: GirlFriday.NavBarItem[] = [
     withSideBar: false,
     withNavBar: false,
   },
+  {
+    name: 'All Components',
+    path: PagePath.AllComponents,
+    isInNavBar: false,
+    withSideBar: false,
+    withNavBar: false,
+  },
 ]
 
 export const Routes = () =>
@@ -49,6 +58,10 @@ export const Routes = () =>
     {
       path: PagePath.Tags,
       element: <Tags />,
+    },
+    {
+      path: PagePath.AllComponents,
+      element: <AllComponents />,
     },
     {
       path: '*',
