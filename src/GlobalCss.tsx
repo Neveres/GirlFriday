@@ -26,6 +26,10 @@ export const GlobalCss = () => (
         line-height: 150%;
         margin-bottom: 24px;
       }
+
+      .tabpanel::-webkit-scrollbar {
+        display: none;
+      }
     `}
   />
 )

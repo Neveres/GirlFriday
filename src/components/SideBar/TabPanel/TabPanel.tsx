@@ -1,4 +1,6 @@
+/** @jsxImportSource @emotion/react */
 import React from 'react'
+import { tabPanelContainer } from './styles'
 
 interface ITabPanel {
   children?: React.ReactNode
@@ -9,14 +11,11 @@ interface ITabPanel {
 const TabPanel: React.FC<ITabPanel> = ({ children, index, value }) => {
   return (
     <div
+      css={tabPanelContainer}
+      className="tabpanel"
       role="tabpanel"
       hidden={value !== index}
       id={`tabpanel-${index}`}
-      style={{
-        overflowY: 'auto',
-        height: '200%',
-        resize: 'both',
-      }}
     >
       {value === index && <div>{children}</div>}
     </div>
