@@ -3,8 +3,9 @@ import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const homeContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
+    box-sizing: border-box;
     height: 900px;
-    margin: 54px 0 0 210px;
+    padding: 54px 0 0 210px;
 
     .search-container {
       padding-bottom: 28px;

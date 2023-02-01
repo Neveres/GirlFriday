@@ -6,7 +6,7 @@ export const sideBarContainer = css`
   right: 0px;
   top: 0px;
   width: 375px;
-  height: 118%;
+  height: 100%;
   padding-top: 17px;
   background-color: ${colors.bgSecondary};
   overflow: hidden;
