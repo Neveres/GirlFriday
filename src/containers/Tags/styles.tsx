@@ -10,7 +10,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
       font-weight: ${fontWeight.lighter};
       font-size: 30px;
       line-height: 150%;
-      margin: 79px 0 23px 0;
+      margin: 79px 0 24px 0;
     }
 
     .tag-container {
@@ -25,7 +25,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
         height: 150px;
         background: rgba(255, 255, 255, 0.06);
         border-radius: 10px;
-        margin-bottom: 8px;
+        margin-bottom: 9.5px;
 
         .tag-big-title-name {
           position: absolute;
@@ -34,7 +34,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
           box-sizing: border-box;
           height: 50px;
           max-width: 135px;
-          padding: 9px 11px;
+          padding: 8px 11px 9px 11px;
           font-size: ${fontSize.xxLarge};
           border: 4px solid ${colors.textWhite};
           border-radius: 8px;
@@ -59,6 +59,7 @@ export const tagsContainer: { [index: string]: SerializedStyles } = {
         }
 
         .tag-sub-title-count {
+          margin-top: -2.5px;
           font-size: 11.175px;
           letter-spacing: 0.3725px;
           color: ${colors.textGray};
