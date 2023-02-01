@@ -13,15 +13,15 @@ export const sliderContainer: { [index: string]: SerializedStyles } = {
     }
   `,
   mobile: css`
-    margin-left: -3px;
+    margin-left: -4px;
 
     .MuiSlider-root {
       span:nth-of-type(4) {
-        left: 2% !important;
+        left: 2.25% !important;
       }
 
       span:nth-of-type(14) {
-        left: 96.25% !important;
+        left: 96.5% !important;
       }
     }
   `,

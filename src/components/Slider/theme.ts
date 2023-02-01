@@ -68,7 +68,7 @@ export const theme: { [index: string]: Theme } = {
             width: '343px',
             '& .MuiSlider-markLabel': {
               ...styleOverrides.root['& .MuiSlider-markLabel'],
-              top: '41px',
+              top: '40px',
               fontWeight: fontWeight.lighter,
               fontSize: fontSize.large,
               lineHeight: '150%',

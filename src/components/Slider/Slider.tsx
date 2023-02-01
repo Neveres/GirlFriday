@@ -50,20 +50,20 @@ const markMaps: {
       value: 0.5,
       label: 3,
     },
-    19: {
-      value: 19,
+    19.25: {
+      value: 19.25,
       label: 6,
     },
-    35.25: {
-      value: 35.25,
+    35.5: {
+      value: 35.5,
       label: 9,
     },
-    52.75: {
-      value: 52.75,
+    53: {
+      value: 53,
       label: 12,
     },
-    69.25: {
-      value: 69.25,
+    69.5: {
+      value: 69.5,
       label: 15,
     },
     99: {

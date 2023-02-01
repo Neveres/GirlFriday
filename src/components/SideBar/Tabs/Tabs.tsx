@@ -9,7 +9,7 @@ interface IStyledTabProps {
 
 export const Tabs = styled(MuiTabs)({
   '& .MuiTabs-indicator': {
-    width: '189px !important',
+    width: '187px !important',
     backgroundColor: colors.textWhite,
   },
 })
