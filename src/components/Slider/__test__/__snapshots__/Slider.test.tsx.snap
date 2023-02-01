@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider should render well under desktop layout 1`] = `
+<div
+  className="css-i03fxg-Slider"
+>
+  <span
+    className="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeMedium MuiSlider-marked css-ywwzzz-MuiSlider-root"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="MuiSlider-rail css-1yl93wt-MuiSlider-rail"
+    />
+    <span
+      className="MuiSlider-track css-14evhpx-MuiSlider-track"
+      style={
+        Object {
+          "left": "0%",
+          "width": "0%",
+        }
+      }
+    />
+    <span
+      className="MuiSlider-mark MuiSlider-markActive css-uitvzs-MuiSlider-mark"
+      data-index={0}
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+    />
+    <span
+      aria-hidden={true}
+      className="MuiSlider-markLabel MuiSlider-markLabelActive css-1eoe787-MuiSlider-markLabel"
+      data-index={0}
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+    >
+      3
+    </span>
+    <span
+      className="MuiSlider-mark css-ovj1yd-MuiSlider-mark"
+      data-index={1}
+      style={
+        Object {
+          "left": "19.16243654822335%",
+        }
+      }
+    />
+    <span
+      aria-hidden={true}
+      className="MuiSlider-markLabel css-yafthl-MuiSlider-markLabel"
+      data-index={1}
+      style={
+        Object {
+          "left": "19.16243654822335%",
+        }
+      }
+    >
+      6
+    </span>
+    <span
+      className="MuiSlider-mark css-ovj1yd-MuiSlider-mark"
+      data-index={2}
+      style={
+        Object {
+          "left": "37.56345177664975%",
+        }
+      }
+    />
+    <span
+      aria-hidden={true}
+      className="MuiSlider-markLabel css-yafthl-MuiSlider-markLabel"
+      data-index={2}
+      style={
+        Object {
+          "left": "37.56345177664975%",
+        }
+      }
+    >
+      9
+    </span>
+    <span
+      className="MuiSlider-mark css-ovj1yd-MuiSlider-mark"
+      data-index={3}
+      style={
+        Object {
+          "left": "56.598984771573605%",
+        }
+      }
+    />
+    <span
+      aria-hidden={true}
+      className="MuiSlider-markLabel css-yafthl-MuiSlider-markLabel"
+      data-index={3}
+      style={
+        Object {
+          "left": "56.598984771573605%",
+        }
+      }
+    >
+      12
+    </span>
+    <span
+      className="MuiSlider-mark css-ovj1yd-MuiSlider-mark"
+      data-index={4}
+      style={
+        Object {
+          "left": "75.1269035532995%",
+        }
+      }
+    />
+    <span
+      aria-hidden={true}
+      className="MuiSlider-markLabel css-yafthl-MuiSlider-markLabel"
+      data-index={4}
+      style={
+        Object {
+          "left": "75.1269035532995%",
+        }
+      }
+    >
+      15
+    </span>
+    <span
+      className="MuiSlider-mark css-ovj1yd-MuiSlider-mark"
+      data-index={5}
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+    />
+    <span
+      aria-hidden={true}
+      className="MuiSlider-markLabel css-yafthl-MuiSlider-markLabel"
+      data-index={5}
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+    >
+      50
+    </span>
+    <span
+      className="MuiSlider-thumb MuiSlider-thumbColorPrimary MuiSlider-thumbSizeMedium css-w5p0kn-MuiSlider-thumb"
+      data-focusvisible={false}
+      data-index={0}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      style={
+        Object {
+          "left": "0%",
+          "pointerEvents": undefined,
+        }
+      }
+    >
+      <input
+        aria-orientation="horizontal"
+        aria-valuemax={50}
+        aria-valuemin={3}
+        aria-valuenow={3}
+        data-index={0}
+        disabled={false}
+        max={99}
+        min={0.5}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        style={
+          Object {
+            "border": 0,
+            "clip": "rect(0 0 0 0)",
+            "direction": "ltr",
+            "height": "100%",
+            "margin": -1,
+            "overflow": "hidden",
+            "padding": 0,
+            "position": "absolute",
+            "whiteSpace": "nowrap",
+            "width": "100%",
+          }
+        }
+        type="range"
+        value={0.5}
+      />
+      <span
+        aria-hidden={true}
+        className="MuiSlider-valueLabel css-nnid7-MuiSlider-valueLabel"
+      >
+        <span
+          className="MuiSlider-valueLabelCircle"
+        >
+          <span
+            className="MuiSlider-valueLabelLabel"
+          >
+            3
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</div>
+`;
