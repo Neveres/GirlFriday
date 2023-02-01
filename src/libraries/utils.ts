@@ -10,4 +10,4 @@ const sideBarMap = (() => {
 })()
 
 export const pathWithSideBar = (pathname: string) =>
-  sideBarMap.has(pathname) ? sideBarMap.get(pathname) : { withSideBar: false }
+  sideBarMap.has(pathname) ? sideBarMap.get(pathname) : false
