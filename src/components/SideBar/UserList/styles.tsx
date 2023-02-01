@@ -54,41 +54,39 @@ export const userListContainer = css`
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        letter-spacing: 0.3px;
+        font-size: ${fontSize.small};
 
-        .user-status-follow {
+        .user-status-following {
           width: 56px;
           font-family: ${fontFamily.openSans};
-          font-size: ${fontSize.small};
           font-weight: ${fontWeight.bold};
           line-height: 100%;
           color: ${colors.textBlack};
         }
 
-        .user-status-not-follow {
+        .user-status-unfollow {
           width: 40px;
           font-family: ${fontFamily.openSans};
-          font-size: ${fontSize.small};
           font-weight: ${fontWeight.lighter};
           line-height: 100%;
           margin-left: 1px;
         }
       }
 
-      .follow {
+      .following {
         width: 76px;
         height: 28px;
         top: 8px;
         right: 1px;
         background: ${colors.textWhite};
-        letter-spacing: 0.3px;
       }
 
-      .not-follow {
+      .unfollow {
         width: 60px;
         height: 29px;
         top: 8px;
         right: 0;
-        letter-spacing: 0.3px;
       }
     }
   }
