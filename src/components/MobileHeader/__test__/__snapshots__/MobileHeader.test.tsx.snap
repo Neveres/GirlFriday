@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileHeader should render well 1`] = `
+<div
+  className="css-jfinxm-MobileHeader"
+>
+  <svg
+    aria-hidden={true}
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+    data-testid="KeyboardArrowLeftIcon"
+    focusable="false"
+    onClick={[Function]}
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+    />
+  </svg>
+  <span>
+    Home Page
+  </span>
+</div>
+`;
