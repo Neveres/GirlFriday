@@ -33,7 +33,7 @@ const SearchResult = () => {
     }
   }
 
-  const { users, increasePage } = useUsers(searchParameters)
+  const { users, increasePage, hasMore } = useUsers(searchParameters)
 
   const imageOnErrorHandler = useCallback(
     (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
@@ -67,6 +67,11 @@ const SearchResult = () => {
     navigate(PagePath.Home)
   }, [navigate])
 
+  const Loader = useMemo(
+    () => (hasMore ? <LoadingCircular /> : null),
+    [hasMore],
+  )
+
   return (
     <div css={searchResultContainer[layout]}>
       {isMobileLayout ? (
@@ -84,8 +89,8 @@ const SearchResult = () => {
         <InfiniteScroll
           dataLength={users.length}
           next={increasePage}
-          hasMore={true}
-          loader={<LoadingCircular />}
+          hasMore={hasMore}
+          loader={Loader}
         >
           {Content}
         </InfiniteScroll>
