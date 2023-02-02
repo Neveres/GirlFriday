@@ -24,11 +24,12 @@ export const Tab = styled((props: IStyledTabProps) => (
   fontSize: '16px',
   lineHeight: '150%',
   textAlign: 'center',
-  letterSpacing: '0.4px',
+  letterSpacing: '0.35px',
   opacity: 0.87,
   '&.Mui-selected': {
     color: colors.textWhite,
     fontWeight: fontWeight.bolder,
     opacity: 1,
+    letterSpacing: '0.5px',
   },
 }))

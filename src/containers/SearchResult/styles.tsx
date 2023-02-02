@@ -31,7 +31,7 @@ export const searchResultContainer: { [index: string]: SerializedStyles } = {
       margin-left: 53px;
 
       .search-result-row:nth-of-type(2n) {
-        margin-bottom: 50px;
+        margin-bottom: 18px;
       }
 
       .search-result-item {
