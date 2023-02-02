@@ -26,10 +26,12 @@ export const useFriends = () => {
           data: { totalPages, data },
         } = response
 
+        if (hasMore) {
+          setFirends([...friends, ...data])
+        }
+
         if (page >= totalPages) {
           setHasMore(false)
-        } else {
-          setFirends([...friends, ...data])
         }
       })
     // eslint-disable-next-line react-hooks/exhaustive-deps
