@@ -4,7 +4,7 @@ export const sliderContainer: { [index: string]: SerializedStyles } = {
   desktop: css`
     .MuiSlider-root {
       span:nth-of-type(4) {
-        left: 0.75% !important;
+        left: 0.625% !important;
       }
 
       span:nth-of-type(14) {

@@ -3,7 +3,7 @@ import { colors, fontSize, fontWeight, fontFamily } from 'src/GlobalCss'
 
 const styleOverrides = {
   root: {
-    width: '725px',
+    width: '726px',
     '& .MuiSlider-markLabel': {
       top: '34px',
       color: colors.textWhite,
@@ -48,11 +48,11 @@ export const theme: { [index: string]: Theme } = {
           },
           rail: {
             ...styleOverrides.rail,
-            left: '2px !important',
+            left: '1px !important',
           },
           track: {
             ...styleOverrides.track,
-            left: '2px !important',
+            left: '1px !important',
           },
         },
       },

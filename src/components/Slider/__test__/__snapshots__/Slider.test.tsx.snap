@@ -2,17 +2,17 @@
 
 exports[`Slider should render well under desktop layout 1`] = `
 <div
-  className="css-i03fxg-Slider"
+  className="css-1g4en5n-Slider"
 >
   <span
-    className="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeMedium MuiSlider-marked css-ywwzzz-MuiSlider-root"
+    className="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeMedium MuiSlider-marked css-yw0ea-MuiSlider-root"
     onMouseDown={[Function]}
   >
     <span
-      className="MuiSlider-rail css-1yl93wt-MuiSlider-rail"
+      className="MuiSlider-rail css-1e42p1d-MuiSlider-rail"
     />
     <span
-      className="MuiSlider-track css-14evhpx-MuiSlider-track"
+      className="MuiSlider-track css-ehpgh7-MuiSlider-track"
       style={
         Object {
           "left": "0%",
