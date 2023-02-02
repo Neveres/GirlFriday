@@ -12,6 +12,9 @@ const AllComponents = () => {
         <Button text="Button" layout="mobile" />
         <br />
         <br />
+        <Button text="Button" layout="desktop" />
+        <br />
+        <br />
         <div className="outlined-button-wrapper">
           <Button text="Button" type="outlined" />
         </div>
@@ -30,6 +33,12 @@ const AllComponents = () => {
         <Slider value={15} setValue={() => {}} layout={'desktop'} />
         <br />
         <Slider value={50} setValue={() => {}} layout={'desktop'} />
+        <br />
+
+        <Slider value={15} setValue={() => {}} layout={'mobile'} />
+        <br />
+        <Slider value={50} setValue={() => {}} layout={'mobile'} />
+        <br />
       </div>
     </div>
   )
