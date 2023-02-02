@@ -96,6 +96,10 @@ export const searchResultContainer: { [index: string]: SerializedStyles } = {
           color: ${colors.textGray};
         }
       }
+
+      .search-result-item:nth-of-type(1) {
+        margin-bottom: 39px;
+      }
     }
   `,
 }

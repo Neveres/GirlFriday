@@ -78,7 +78,7 @@ export const homeContainer: { [index: string]: SerializedStyles } = {
     }
 
     .page-size-container {
-      padding-bottom: 214px;
+      padding-bottom: 213px;
 
       .page-size-title {
         font-weight: ${fontWeight.lighter};

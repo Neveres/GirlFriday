@@ -12,12 +12,12 @@ const AllComponents = () => {
         <Button text="Button" layout="mobile" />
         <br />
         <br />
-        <div className="button-wrapper">
+        <div className="outlined-button-wrapper">
           <Button text="Button" type="outlined" />
         </div>
 
         <br />
-        <div className="button-wrapper">
+        <div className="contained-button-wrapper">
           <Button text="Button" type="contained" />
         </div>
       </div>

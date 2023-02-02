@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
 import { colors, fontSize, fontWeight } from 'src/GlobalCss'
+import bot_nav_bg from 'src/assets/bot_nav_bg.png'
 
 export const navBarContainer = css`
   position: absolute;
@@ -114,6 +115,7 @@ export const navBarFooterContainer = css`
   background: rgba(24, 24, 24, 0.2);
   box-shadow: inset 0px 0.5px 0px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(27.1828px);
+  background-image: url(${bot_nav_bg});
 
   .navBar-items {
     height: 100%;

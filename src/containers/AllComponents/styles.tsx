@@ -10,9 +10,14 @@ export const componentsContainer = css`
       margin-bottom: 35px;
     }
 
-    .button-wrapper {
+    .outlined-button-wrapper {
       width: 60px;
       height: 29px;
+    }
+
+    .contained-button-wrapper {
+      width: 52px;
+      height: 25px;
     }
   }
 `
