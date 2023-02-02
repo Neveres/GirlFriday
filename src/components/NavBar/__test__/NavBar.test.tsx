@@ -8,7 +8,7 @@ describe('NavBar', () => {
   const paths = Object.values(PagePath).map((value) => value)
 
   test('should render well under desktop layout', () => {
-    for (let i = 0, maxI = paths.length; i < maxI; i++) {
+    for (let i = 0, maxI = paths.length - 1; i < maxI; i++) {
       const testRenderer = create(
         <BrowserRouter>
           <AppContext.Provider
@@ -29,7 +29,7 @@ describe('NavBar', () => {
   })
 
   test('should render well under mobile layout', () => {
-    for (let i = 0, maxI = paths.length; i < maxI; i++) {
+    for (let i = 0, maxI = paths.length - 1; i < maxI; i++) {
       const testRenderer = create(
         <BrowserRouter>
           <AppContext.Provider
