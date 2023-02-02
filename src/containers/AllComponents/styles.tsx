@@ -9,5 +9,10 @@ export const componentsContainer = css`
     .component-type {
       margin-bottom: 35px;
     }
+
+    .button-wrapper {
+      width: 60px;
+      height: 29px;
+    }
   }
 `

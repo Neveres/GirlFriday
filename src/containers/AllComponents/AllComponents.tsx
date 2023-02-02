@@ -9,7 +9,17 @@ const AllComponents = () => {
       <h1>Component</h1>
       <div className="componentContainer">
         <div className="component-type">Button</div>
-        <Button onClick={() => {}} text="search" layout={'desktop'} />
+        <Button text="Button" layout="desktop" />
+        <br />
+        <br />
+        <div className="button-wrapper">
+          <Button text="Button" type="outlined" />
+        </div>
+
+        <br />
+        <div className="button-wrapper">
+          <Button text="Button" type="contained" />
+        </div>
       </div>
       <div className="componentContainer">
         <div className="component-type">Input</div>
