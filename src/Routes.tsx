@@ -36,13 +36,6 @@ export const menuItems: GirlFriday.NavBarItem[] = [
     withSideBar: false,
     withNavBar: false,
   },
-  {
-    name: 'All Components',
-    path: PagePath.AllComponents,
-    isInNavBar: false,
-    withSideBar: false,
-    withNavBar: false,
-  },
 ]
 
 export const Routes = () =>
