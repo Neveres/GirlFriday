@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { useMemo, useCallback } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import { LoadingCircular } from 'src/components'
+import { LoadingCircular, Button } from 'src/components'
 import { FALLBACK_IMAGE } from 'src/settings'
 import { userListContainer } from './styles'
 
@@ -40,9 +40,9 @@ const UserList: React.FC<IUserList> = ({ users, fetchMoreUser, hasMore }) => {
               }`}
             >
               {isFollowing ? (
-                <div className="user-status-following">Following</div>
+                <Button text="Following" type="contained" />
               ) : (
-                <div className="user-status-unfollow">Follow</div>
+                <Button text="Follow" type="outlined" />
               )}
             </div>
           </div>

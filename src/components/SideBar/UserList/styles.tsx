@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { colors, fontFamily, fontSize, fontWeight } from 'src/GlobalCss'
+import { colors, fontSize, fontWeight } from 'src/GlobalCss'
 
 export const userListContainer = css`
   width: 343px;
@@ -48,29 +48,6 @@ export const userListContainer = css`
 
       .user-status {
         position: absolute;
-        box-sizing: border-box;
-        border: 1px solid ${colors.textWhite};
-        border-radius: 20px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        letter-spacing: 0.3px;
-        font-size: ${fontSize.small};
-        font-weight: ${fontWeight.bold};
-
-        .user-status-following {
-          width: 56px;
-          font-family: ${fontFamily.openSans};
-          line-height: 100%;
-          color: ${colors.textBlack};
-        }
-
-        .user-status-unfollow {
-          width: 40px;
-          font-family: ${fontFamily.openSans};
-          line-height: 100%;
-          margin-left: 1px;
-        }
       }
 
       .following {
@@ -78,14 +55,6 @@ export const userListContainer = css`
         height: 28px;
         top: 8px;
         right: 1px;
-        background: ${colors.textWhite};
-      }
-
-      .following:hover {
-        background: unset;
-        .user-status-following {
-          color: ${colors.textWhite};
-        }
       }
 
       .unfollow {
@@ -93,14 +62,6 @@ export const userListContainer = css`
         height: 29px;
         top: 8px;
         right: 0;
-      }
-
-      .unfollow:hover {
-        background: ${colors.textWhite};
-
-        .user-status-unfollow {
-          color: ${colors.textBlack};
-        }
       }
     }
   }
