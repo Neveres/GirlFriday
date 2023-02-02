@@ -1,10 +1,10 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import { LoadingProgress } from 'src/components'
+import { Loading } from 'src/components'
 
-describe('LoadingProgress', () => {
+describe('Loading', () => {
   test('should render well', () => {
-    const testRenderer = create(<LoadingProgress />)
+    const testRenderer = create(<Loading />)
     expect(testRenderer.toJSON()).toMatchSnapshot()
   })
 })

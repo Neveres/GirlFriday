@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`LoadingProgress should render well 1`] = `
-<div
-  className="css-lszryc-LoadingCircular"
->
-  Loading...
-</div>
-`;

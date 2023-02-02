@@ -1,13 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { Suspense, useReducer, useMemo } from 'react'
 import { useLocation } from 'react-router'
-import {
-  NavBar,
-  AppBody,
-  AppContext,
-  SideBar,
-  LoadingProgress,
-} from 'src/components'
+import { NavBar, AppBody, AppContext, SideBar, Loading } from 'src/components'
 import { Routes } from 'src/Routes'
 import { useInnerWidth } from 'src/hooks'
 import {
@@ -79,7 +73,7 @@ const App = () => {
         <NavBar pathname={pathname} />
 
         <AppBody pathname={pathname}>
-          <Suspense fallback={<LoadingProgress />}>
+          <Suspense fallback={<Loading />}>
             <Routes />
           </Suspense>
         </AppBody>

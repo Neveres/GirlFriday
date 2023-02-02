@@ -2,6 +2,6 @@
 import React from 'react'
 import { loadingContainer } from './styles'
 
-const LoadingCircular = () => <div css={loadingContainer}>Loading...</div>
+const Loading = () => <div css={loadingContainer}>Loading...</div>
 
-export default LoadingCircular
+export default Loading
