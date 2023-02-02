@@ -3,6 +3,7 @@ import React, { useContext, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import InfiniteScroll from 'react-infinite-scroll-component'
+// import { EmotionJSX } from '@emotion/react/types/jsx-namespace'
 import {
   AppContext,
   Button,
@@ -14,6 +15,7 @@ import { STORAGE_KEY_OF_SEARCH_PARAMETERS, FALLBACK_IMAGE } from 'src/settings'
 import { PagePath } from 'src/Routes'
 import { searchResultContainer } from './styles'
 
+const NUMBER_OF_MEMBER_IN_EACH_ROW = 3
 const SearchResult = () => {
   const navigate = useNavigate()
   const {
@@ -43,21 +45,39 @@ const SearchResult = () => {
     [],
   )
 
-  const Content = useMemo(
-    () =>
-      users.map(({ id, name, username, avater }) => (
-        <div key={id} className="search-result-item">
-          <img
-            className="search-result-item-avater"
-            src={avater}
-            onError={imageOnErrorHandler}
-          />
-          <div className="search-result-item-name">{name}</div>
-          <div className="search-result-item-username">by {username}</div>
+  const Content = useMemo(() => {
+    const elements = users.map(({ id, name, username, avater }) => (
+      <div key={id} className="search-result-item">
+        <img
+          className="search-result-item-avater"
+          src={avater}
+          onError={imageOnErrorHandler}
+        />
+        <div className="search-result-item-name">{name}</div>
+        <div className="search-result-item-username">by {username}</div>
+      </div>
+    ))
+
+    if (isMobileLayout) {
+      return elements
+    } else {
+      const rows: Array<typeof elements[0]>[] = []
+      let indexOfRow = 0
+      elements.forEach((element, index) => {
+        rows[indexOfRow] = rows[indexOfRow] || []
+        rows[indexOfRow].push(element)
+        if (index % NUMBER_OF_MEMBER_IN_EACH_ROW === 2) {
+          indexOfRow++
+        }
+      })
+
+      return rows.map((row, index) => (
+        <div className="search-result-row" key={`row-${index}`}>
+          {row}
         </div>
-      )),
-    [imageOnErrorHandler, users],
-  )
+      ))
+    }
+  }, [imageOnErrorHandler, isMobileLayout, users])
 
   const onClick = useCallback(() => {
     increasePage()

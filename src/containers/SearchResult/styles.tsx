@@ -29,6 +29,11 @@ export const searchResultContainer: { [index: string]: SerializedStyles } = {
 
     .search-result-content {
       margin-left: 53px;
+
+      .search-result-row:nth-of-type(2n) {
+        margin-bottom: 50px;
+      }
+
       .search-result-item {
         display: inline-block;
         margin: 0 34px 31px 0;
