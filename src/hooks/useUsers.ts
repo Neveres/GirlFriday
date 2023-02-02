@@ -33,14 +33,12 @@ export const useUsers = (searchParameters?: GirlFriday.SearchParameters) => {
             data: { totalPages, data },
           } = response
 
+          if (hasMore) {
+            setUsers([...users, ...data])
+          }
+
           if (page >= totalPages) {
             setHasMore(false)
-          } else {
-            if (page === 1) {
-              setUsers(data)
-            } else {
-              setUsers([...users, ...data])
-            }
           }
         })
     }
