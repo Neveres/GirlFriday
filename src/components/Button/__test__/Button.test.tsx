@@ -19,4 +19,14 @@ describe('Button', () => {
     const testRenderer = create(<Button {...props} />)
     expect(testRenderer.toJSON()).toMatchSnapshot()
   })
+
+  test('type "contained" should render well', () => {
+    const testRenderer = create(<Button {...props} type="contained" />)
+    expect(testRenderer.toJSON()).toMatchSnapshot()
+  })
+
+  test('type "outlined" should render well', () => {
+    const testRenderer = create(<Button {...props} type="outlined" />)
+    expect(testRenderer.toJSON()).toMatchSnapshot()
+  })
 })

@@ -50,3 +50,27 @@ exports[`Button should render well under mobile layout 1`] = `
   />
 </button>
 `;
+
+exports[`Button type "contained" should render well 1`] = `
+<div
+  className="css-385uyt-Contained"
+>
+  <span
+    className="button-text"
+  >
+    text
+  </span>
+</div>
+`;
+
+exports[`Button type "outlined" should render well 1`] = `
+<div
+  className="css-2qsxy8-Outlined"
+>
+  <span
+    className="button-text"
+  >
+    text
+  </span>
+</div>
+`;
