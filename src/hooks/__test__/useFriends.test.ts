@@ -21,6 +21,7 @@ const data = [
 
 const mockResponse = {
   data: {
+    totalPages: Infinity,
     data: [
       {
         ...data[0],
@@ -61,6 +62,33 @@ describe('useFriends', () => {
 
     await waitFor(() => {
       expect(result.current.friends).toStrictEqual(data)
+    })
+  })
+
+  test('hasMore should be set false while reaching totalPages', async () => {
+    mockResponse.data.totalPages = 1
+    const { result } = renderHook(useFriends)
+
+    await waitFor(() => {
+      expect(result.current.hasMore).toBeFalsy()
+      expect(result.current.friends).toStrictEqual([data[1]])
+    })
+  })
+
+  test("increasePage won't increase page while hasMore is false", async () => {
+    const { result } = renderHook(useFriends)
+
+    await waitFor(() => {
+      expect(result.current.hasMore).toBeFalsy()
+      expect(result.current.friends).toStrictEqual([data[1]])
+    })
+
+    act(() => {
+      result.current.increasePage()
+    })
+
+    await waitFor(() => {
+      expect(result.current.hasMore).toBeFalsy()
     })
   })
 })
