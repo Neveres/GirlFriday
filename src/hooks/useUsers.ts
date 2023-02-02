@@ -22,21 +22,29 @@ export const useUsers = (searchParameters?: GirlFriday.SearchParameters) => {
   }, [hasMore, page])
 
   useEffect(() => {
-    httpClient
-      .get('users/all', {
-        params,
-      })
-      .then((response) => {
-        const {
-          data: { totalPages, data },
-        } = response
+    const { keyword } = params
+    if (typeof keyword !== 'string' || keyword !== '') {
+      httpClient
+        .get('users/all', {
+          params,
+        })
+        .then((response) => {
+          const {
+            data: { totalPages, data },
+          } = response
 
-        if (page >= totalPages) {
-          setHasMore(false)
-        } else {
-          setUsers([...users, ...data])
-        }
-      })
+          if (page >= totalPages) {
+            setHasMore(false)
+          } else {
+            if (page === 1) {
+              setUsers(data)
+            } else {
+              setUsers([...users, ...data])
+            }
+          }
+        })
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, params])
 
