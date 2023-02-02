@@ -24,18 +24,21 @@ const Home = () => {
   )
 
   const onClick = useCallback(() => {
-    setSearchParameters({
-      keyword,
-      page: 1,
-      pageSize,
-    })
+    if (keyword) {
+      setSearchParameters({
+        keyword,
+        page: 1,
+        pageSize,
+      })
 
-    set({
-      keyword,
-      page: 1,
-      pageSize,
-    })
-    navigate('/search-result')
+      set({
+        keyword,
+        page: 1,
+        pageSize,
+      })
+
+      navigate('/search-result')
+    }
   }, [keyword, navigate, pageSize, set, setSearchParameters])
 
   return (
