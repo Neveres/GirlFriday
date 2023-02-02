@@ -1,10 +1,10 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import { LoadingCircular } from 'src/components'
+import { Spinner } from 'src/components'
 
-describe('LoadingCircular', () => {
+describe('Spinner', () => {
   test('should render well', () => {
-    const testRenderer = create(<LoadingCircular />)
+    const testRenderer = create(<Spinner />)
     expect(testRenderer.toJSON()).toMatchSnapshot()
   })
 })

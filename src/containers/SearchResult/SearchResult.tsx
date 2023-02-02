@@ -3,13 +3,7 @@ import React, { useContext, useMemo, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import InfiniteScroll from 'react-infinite-scroll-component'
-// import { EmotionJSX } from '@emotion/react/types/jsx-namespace'
-import {
-  AppContext,
-  Button,
-  MobileHeader,
-  LoadingCircular,
-} from 'src/components'
+import { AppContext, Button, MobileHeader, Spinner } from 'src/components'
 import { useUsers, useStorage } from 'src/hooks'
 import { STORAGE_KEY_OF_SEARCH_PARAMETERS, FALLBACK_IMAGE } from 'src/settings'
 import { PagePath } from 'src/Routes'
@@ -87,10 +81,7 @@ const SearchResult = () => {
     navigate(PagePath.Home)
   }, [navigate])
 
-  const Loader = useMemo(
-    () => (hasMore ? <LoadingCircular /> : null),
-    [hasMore],
-  )
+  const Loader = useMemo(() => (hasMore ? <Spinner /> : null), [hasMore])
 
   return (
     <div css={searchResultContainer[layout]}>

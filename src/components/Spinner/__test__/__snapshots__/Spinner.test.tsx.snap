@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadingCircular should render well 1`] = `
+exports[`Spinner should render well 1`] = `
 <div
-  className="css-jn9qwi-LoadingCircular"
+  className="css-1nftj-Spinner"
 >
   <span
     className="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"

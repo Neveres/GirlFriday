@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { useMemo, useCallback } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import { LoadingCircular, Button } from 'src/components'
+import { Spinner, Button } from 'src/components'
 import { FALLBACK_IMAGE } from 'src/settings'
 import { userListContainer } from './styles'
 
@@ -51,10 +51,7 @@ const UserList: React.FC<IUserList> = ({ users, fetchMoreUser, hasMore }) => {
     [imageOnErrorHandler, users],
   )
 
-  const Loader = useMemo(
-    () => (hasMore ? <LoadingCircular /> : null),
-    [hasMore],
-  )
+  const Loader = useMemo(() => (hasMore ? <Spinner /> : null), [hasMore])
 
   return (
     <InfiniteScroll
