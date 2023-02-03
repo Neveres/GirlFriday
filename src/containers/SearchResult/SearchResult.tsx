@@ -1,5 +1,11 @@
 /** @jsxImportSource @emotion/react */
-import React, { useContext, useMemo, useCallback } from 'react'
+import React, {
+  useContext,
+  useMemo,
+  useCallback,
+  useEffect,
+  useRef,
+} from 'react'
 import { useNavigate } from 'react-router-dom'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import InfiniteScroll from 'react-infinite-scroll-component'
@@ -11,6 +17,7 @@ import { searchResultContainer } from './styles'
 
 const NUMBER_OF_MEMBER_IN_EACH_ROW = 3
 const SearchResult = () => {
+  const shouldSetSearchParameters = useRef(false)
   const navigate = useNavigate()
   const {
     state: { isMobileLayout, searchParameters, layout },
@@ -28,10 +35,7 @@ const SearchResult = () => {
     ) {
       params = searchParametersFromStorage
 
-      setSearchParameters({
-        ...searchParametersFromStorage,
-        page: 1,
-      })
+      shouldSetSearchParameters.current = true
     }
   }
 
@@ -88,6 +92,16 @@ const SearchResult = () => {
   }, [navigate])
 
   const Loader = useMemo(() => (hasMore ? <Spinner /> : null), [hasMore])
+
+  useEffect(() => {
+    if (shouldSetSearchParameters.current) {
+      shouldSetSearchParameters.current = false
+      setSearchParameters({
+        ...searchParametersFromStorage,
+        page: 1,
+      })
+    }
+  }, [searchParametersFromStorage, setSearchParameters])
 
   return (
     <div css={searchResultContainer[layout]}>
