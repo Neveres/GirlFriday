@@ -18,10 +18,16 @@ const SearchResult = () => {
   } = useContext(AppContext)
 
   const { get } = useStorage(STORAGE_KEY_OF_SEARCH_PARAMETERS, true)
+  const searchParametersFromStorage: GirlFriday.SearchParameters = get()
 
-  if (!searchParameters.keyword) {
-    const searchParametersFromStorage = get()
-    if (searchParametersFromStorage.keyword) {
+  let params = searchParameters
+  if (searchParametersFromStorage) {
+    if (
+      searchParametersFromStorage.keyword !== params.keyword ||
+      searchParametersFromStorage.pageSize !== params.pageSize
+    ) {
+      params = searchParametersFromStorage
+
       setSearchParameters({
         ...searchParametersFromStorage,
         page: 1,
@@ -29,7 +35,7 @@ const SearchResult = () => {
     }
   }
 
-  const { users, increasePage, hasMore } = useUsers(searchParameters)
+  const { users, increasePage, hasMore } = useUsers(params)
 
   const imageOnErrorHandler = useCallback(
     (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
