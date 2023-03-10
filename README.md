@@ -6,7 +6,14 @@ Tech stacks: [React](https://reactjs.org/), [TypeScript](https://www.typescriptl
 
 ## Table of Contents
 
+- [Requirements]()
 - [Demo site](#demo-site)
+
+<a name="requirements"></a>
+
+## Requirements
+
+https://docs.google.com/document/d/1e1SZjgcdr0x5LQhn3i-UvNi03uCW1H8vsMU8XLOs5B4/edit?usp=sharing
 
 <a name="demo-site"></a>
 
