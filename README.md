@@ -19,4 +19,4 @@ https://docs.google.com/document/d/1e1SZjgcdr0x5LQhn3i-UvNi03uCW1H8vsMU8XLOs5B4/
 
 ## Demo site
 
-Navigate to [https://girlfriday-e9ba7.web.app](https://girlfriday-e9ba7.web.app) to see app
+Navigate to [https://girlfriday-e9ba7.web.app](https://girlfriday-e9ba7.web.app/) to see app
